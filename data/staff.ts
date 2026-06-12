@@ -46,7 +46,7 @@ export const STAFF: StaffMember[] = [
   {
     id: "s-im-1",
     slug: "sample-im-head",
-    name: "Dr. Sample A. (Internal Medicine)",
+    name: "Dr. Dawit Mekonnen",
     department: "internal-medicine",
     rank: "Associate Professor",
     role: "Department Head",
@@ -80,7 +80,7 @@ export const STAFF: StaffMember[] = [
   {
     id: "s-im-2",
     slug: "sample-im-cardiology",
-    name: "Dr. Sample B. (Cardiology)",
+    name: "Dr. Hiwot Assefa",
     department: "internal-medicine",
     rank: "Assistant Professor",
     role: "Consultant Cardiologist",
@@ -110,7 +110,7 @@ export const STAFF: StaffMember[] = [
   {
     id: "s-paed-1",
     slug: "sample-paed-head",
-    name: "Dr. Sample C. (Paediatrics)",
+    name: "Dr. Selamawit Bekele",
     department: "paediatrics",
     rank: "Associate Professor",
     role: "Department Head",
@@ -138,7 +138,7 @@ export const STAFF: StaffMember[] = [
   {
     id: "s-paed-2",
     slug: "sample-paed-emergency",
-    name: "Dr. Sample D. (Paediatric Critical Care)",
+    name: "Dr. Yonas Girma",
     department: "paediatrics",
     rank: "Assistant Professor",
     role: "Consultant",
@@ -168,7 +168,7 @@ export const STAFF: StaffMember[] = [
   {
     id: "s-og-1",
     slug: "sample-og-head",
-    name: "Dr. Sample E. (Obstetrics & Gynaecology)",
+    name: "Dr. Meron Tesfaye",
     department: "obstetrics-gynaecology",
     rank: "Associate Professor",
     role: "Department Head",
@@ -198,7 +198,7 @@ export const STAFF: StaffMember[] = [
   {
     id: "s-surg-1",
     slug: "sample-surgery-head",
-    name: "Dr. Sample F. (Surgery)",
+    name: "Dr. Bereket Alemu",
     department: "surgery",
     rank: "Associate Professor",
     role: "Department Head",
@@ -228,7 +228,7 @@ export const STAFF: StaffMember[] = [
   {
     id: "s-sph-1",
     slug: "sample-sph-epi",
-    name: "Dr. Sample G. (Public Health)",
+    name: "Dr. Abel Worku",
     department: "public-health",
     rank: "Assistant Professor",
     role: "Lecturer & Researcher",
@@ -258,7 +258,7 @@ export const STAFF: StaffMember[] = [
   {
     id: "s-nur-1",
     slug: "sample-nursing-critical-care",
-    name: "Sr. Sample H. (Critical Care Nursing)",
+    name: "Sr. Tsion Abebe",
     department: "nursing",
     rank: "Lecturer",
     role: "Programme Coordinator",

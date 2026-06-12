@@ -72,7 +72,8 @@ export const DOCTORS: Doctor[] = [
   {
     id: "d-001",
     slug: "sample-cardiologist",
-    name: "Dr. Sample Consultant — Cardiology",
+    name: "Dr. Eyob Tamrat",
+    photo: "/images/doctors/sample-cardiologist.png",
     credentials: "MD, Internal Medicine; Fellowship in Cardiology",
     title: "Associate Professor & Consultant Cardiologist",
     specialty: "Cardiology",
@@ -91,7 +92,8 @@ export const DOCTORS: Doctor[] = [
   {
     id: "d-002",
     slug: "sample-nephrologist",
-    name: "Dr. Sample Consultant — Nephrology",
+    name: "Dr. Mahlet Girma",
+    photo: "/images/doctors/sample-nephrologist.png",
     credentials: "MD, Internal Medicine; Fellowship in Nephrology",
     title: "Assistant Professor & Consultant Nephrologist",
     specialty: "Nephrology",
@@ -110,7 +112,8 @@ export const DOCTORS: Doctor[] = [
   {
     id: "d-003",
     slug: "sample-obstetrician",
-    name: "Dr. Sample Consultant — Obstetrics & Gynaecology",
+    name: "Dr. Rahel Tadesse",
+    photo: "/images/doctors/sample-obstetrician.png",
     credentials: "MD, Obstetrics & Gynaecology; Fellowship in Maternal-Foetal Medicine",
     title: "Associate Professor & Consultant Obstetrician-Gynaecologist",
     specialty: "Obstetrics & Gynaecology",
@@ -129,7 +132,8 @@ export const DOCTORS: Doctor[] = [
   {
     id: "d-004",
     slug: "sample-fertility-specialist",
-    name: "Dr. Sample Consultant — Reproductive Medicine",
+    name: "Dr. Samuel Negash",
+    photo: "/images/doctors/sample-fertility-specialist.png",
     credentials: "MD, OB-GYN; Fellowship in Reproductive Endocrinology & Infertility",
     title: "Assistant Professor & Fertility Specialist",
     specialty: "Reproductive Medicine",
@@ -145,7 +149,8 @@ export const DOCTORS: Doctor[] = [
   {
     id: "d-005",
     slug: "sample-paediatrician",
-    name: "Dr. Sample Consultant — Paediatrics",
+    name: "Dr. Bethlehem Alemu",
+    photo: "/images/doctors/sample-paediatrician.png",
     credentials: "MD, Paediatrics & Child Health; Fellowship in Neonatology",
     title: "Assistant Professor & Consultant Paediatrician-Neonatologist",
     specialty: "Paediatrics",
@@ -164,7 +169,8 @@ export const DOCTORS: Doctor[] = [
   {
     id: "d-006",
     slug: "sample-general-surgeon",
-    name: "Dr. Sample Consultant — General Surgery",
+    name: "Dr. Henok Desta",
+    photo: "/images/doctors/sample-general-surgeon.png",
     credentials: "MD, General Surgery; Fellowship in Hepatobiliary Surgery",
     title: "Associate Professor & Consultant General Surgeon",
     specialty: "General Surgery",
@@ -180,7 +186,8 @@ export const DOCTORS: Doctor[] = [
   {
     id: "d-007",
     slug: "sample-urologist",
-    name: "Dr. Sample Consultant — Urology",
+    name: "Dr. Nathnael Fikre",
+    photo: "/images/doctors/sample-urologist.png",
     credentials: "MD, General Surgery; Fellowship in Urology & Transplant Surgery",
     title: "Assistant Professor & Consultant Urologist",
     specialty: "Urology",
@@ -196,7 +203,8 @@ export const DOCTORS: Doctor[] = [
   {
     id: "d-008",
     slug: "sample-neurologist",
-    name: "Dr. Sample Consultant — Neurology",
+    name: "Dr. Sara Mengistu",
+    photo: "/images/doctors/sample-neurologist.png",
     credentials: "MD, Neurology",
     title: "Assistant Professor & Consultant Neurologist",
     specialty: "Neurology",
@@ -212,7 +220,8 @@ export const DOCTORS: Doctor[] = [
   {
     id: "d-009",
     slug: "sample-orthopaedic-surgeon",
-    name: "Dr. Sample Consultant — Orthopaedics",
+    name: "Dr. Kaleb Asrat",
+    photo: "/images/doctors/sample-orthopaedic-surgeon.png",
     credentials: "MD, Orthopaedic Surgery",
     title: "Assistant Professor & Consultant Orthopaedic Surgeon",
     specialty: "Orthopaedics",
@@ -228,7 +237,8 @@ export const DOCTORS: Doctor[] = [
   {
     id: "d-010",
     slug: "sample-dermatologist",
-    name: "Dr. Sample Consultant — Dermatology",
+    name: "Dr. Helen Getachew",
+    photo: "/images/doctors/sample-dermatologist.png",
     credentials: "MD, Dermatology & Venereology",
     title: "Assistant Professor & Consultant Dermatologist",
     specialty: "Dermatology",
@@ -247,7 +257,8 @@ export const DOCTORS: Doctor[] = [
   {
     id: "d-011",
     slug: "sample-psychiatrist",
-    name: "Dr. Sample Consultant — Psychiatry",
+    name: "Dr. Mikiyas Lemma",
+    photo: "/images/doctors/sample-psychiatrist.png",
     credentials: "MD, Psychiatry",
     title: "Assistant Professor & Consultant Psychiatrist",
     specialty: "Psychiatry",
@@ -263,7 +274,8 @@ export const DOCTORS: Doctor[] = [
   {
     id: "d-012",
     slug: "sample-ophthalmologist",
-    name: "Dr. Sample Consultant — Ophthalmology",
+    name: "Dr. Ruth Solomon",
+    photo: "/images/doctors/sample-ophthalmologist.png",
     credentials: "MD, Ophthalmology",
     title: "Assistant Professor & Consultant Ophthalmologist",
     specialty: "Ophthalmology",

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Doctor } from "@/data/doctors";
 
 const DAY_NAMES = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
@@ -8,12 +9,23 @@ export default function DoctorCard({ doctor }: { doctor: Doctor }) {
   return (
     <article className="flex h-full flex-col rounded-xl border border-line bg-white p-5 transition hover:border-brand/40 hover:shadow-md">
       <div className="flex items-start gap-4">
-        <div
-          aria-hidden
-          className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-brand/10 font-display text-lg font-bold text-brand"
-        >
-          {doctor.specialty.slice(0, 2).toUpperCase()}
-        </div>
+        {doctor.photo ? (
+          <Image
+            src={doctor.photo}
+            alt=""
+            aria-hidden
+            width={56}
+            height={56}
+            className="h-14 w-14 shrink-0 rounded-full border border-line object-cover"
+          />
+        ) : (
+          <div
+            aria-hidden
+            className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-brand/10 font-display text-lg font-bold text-brand"
+          >
+            {doctor.specialty.slice(0, 2).toUpperCase()}
+          </div>
+        )}
         <div>
           <h3 className="font-display text-lg font-bold leading-snug text-navy">
             <Link href={`/private-wing/doctors/${doctor.slug}`} className="hover:text-brand hover:underline">

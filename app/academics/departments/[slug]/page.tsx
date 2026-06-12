@@ -17,14 +17,14 @@ export function generateStaticParams() {
 function deptBanner(dept: Department): { src: string; alt: string } {
   const byType: Record<string, { src: string; alt: string }> = {
     clinical: { src: "/images/campus/cardiovascular.png", alt: "Clinical facilities at St. Paul's" },
-    preclinical: { src: "/images/clinical/lab-analyzer.jpg", alt: "Laboratory science at St. Paul's" },
-    academic: { src: "/images/community/ambassadors.jpg", alt: "SPHMMC students and graduates" },
+    preclinical: { src: "/images/clinical/lab-amr.jpg", alt: "Laboratory science at St. Paul's" },
+    academic: { src: "/images/campus/entrance-group-2x.jpg", alt: "SPHMMC staff and students at the main hospital" },
   };
   // A few department-specific overrides for stronger relevance
   const overrides: Record<string, { src: string; alt: string }> = {
     pathology: { src: "/images/clinical/lab-amr.jpg", alt: "Pathology laboratory work" },
-    microbiology: { src: "/images/lab/all-labs.png", alt: "Microbiology laboratory" },
-    radiology: { src: "/images/clinical/lab-analyzer.jpg", alt: "Diagnostic imaging equipment" },
+    microbiology: { src: "/images/clinical/lab-amr.jpg", alt: "Antibiotic-susceptibility testing in the microbiology laboratory" },
+    radiology: { src: "/images/campus/cardiovascular.png", alt: "The Cardiovascular Center — advanced imaging-guided care" },
     "internal-medicine": { src: "/images/campus/cardiovascular.png", alt: "The Cardiovascular Center" },
     pharmacy: { src: "/images/clinical/pharmacy-team.jpg", alt: "SPHMMC pharmacy team in white coats at the College" },
     pharmacology: { src: "/images/clinical/pharmacy-team.jpg", alt: "SPHMMC pharmacy team in white coats at the College" },

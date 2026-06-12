@@ -66,10 +66,11 @@ export default function EducationPage() {
       <section className="mx-auto max-w-7xl px-4 pt-10">
         <div className="overflow-hidden rounded-2xl border border-line">
           <Image
-            src="/images/community/ambassadors.jpg"
-            alt="SPHMMC community-health outreach"
-            width={1400}
-            height={420}
+            src="/images/campus/entrance-group-2x.jpg"
+            alt="St. Paul's clinicians and nurses in front of the main hospital"
+            width={1536}
+            height={1004}
+            quality={90}
             priority
             className="h-48 w-full object-cover sm:h-60"
           />

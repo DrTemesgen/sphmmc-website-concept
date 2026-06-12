@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { DOCTORS, doctorBySlug } from "@/data/doctors";
 import { departmentBySlug } from "@/data/departments";
@@ -49,6 +50,15 @@ export default async function DoctorProfilePage({
         <div className="grid gap-10 lg:grid-cols-3">
           <div className="space-y-8 lg:col-span-2">
             <div>
+              {doctor.photo && (
+                <Image
+                  src={doctor.photo}
+                  alt={`Illustrated avatar of ${doctor.name}`}
+                  width={112}
+                  height={112}
+                  className="mx-auto mb-5 h-28 w-28 rounded-full border-2 border-line object-cover"
+                />
+              )}
               <h2 className="font-display text-xl font-bold text-navy">About</h2>
               <p className="mt-3 leading-relaxed text-ink">{doctor.bio}</p>
             </div>
