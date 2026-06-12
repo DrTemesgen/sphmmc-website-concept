@@ -7,7 +7,7 @@ import { PageHero, Breadcrumbs, SectionHeading } from "@/components/ui";
 export const metadata: Metadata = {
   title: "Leadership & Governance",
   description:
-    "Governance of SPHMMC — the Governing Board, the Senate, the Provost/CED and the four Corporate Directorates.",
+    "Governance of SPHMMC — the Governing Board, the Senate, the Provost and the four Corporate Directorates.",
 };
 
 const governanceBodies = [
@@ -23,8 +23,8 @@ const governanceBodies = [
   },
   {
     id: "provost",
-    name: "Provost / Chief Executive Director",
-    text: "The chief executive and academic officer of the College, reporting to the Board. Seven offices report directly to the Provost/CED — Internal Audit, Ethics & Anti-Corruption, Legal Service, Public Relations & Communication, Gender & Social Affairs Inclusion, the Provost/CED Office — alongside Aabet Hospital and the four Corporate Directorates.",
+    name: "Provost",
+    text: "The chief executive and academic officer of the College, reporting to the Board. Seven offices report directly to the Provost — Internal Audit, Ethics & Anti-Corruption, Legal Service, Public Relations & Communication, Gender & Social Affairs Inclusion, the Provost Office — alongside Aabet Hospital and the four Corporate Directorates.",
   },
 ];
 
@@ -34,7 +34,7 @@ export default function LeadershipPage() {
       <PageHero
         eyebrow="About SPHMMC"
         title="Leadership & Governance"
-        intro="The College is governed by a Governing Board accountable to the Ministry of Health, an academic Senate, and a Provost/CED leading four Corporate Directorates."
+        intro="The College is governed by a Governing Board accountable to the Ministry of Health, an academic Senate, and a Provost leading four Corporate Directorates."
       />
       <Breadcrumbs items={[{ label: "About", href: "/about" }, { label: "Leadership" }]} />
 
@@ -61,7 +61,7 @@ export default function LeadershipPage() {
         <div className="mx-auto max-w-7xl px-4">
           <SectionHeading
             eyebrow="Executive Leadership"
-            title="The Provost/CED & Corporate Directors"
+            title="The Provost & Corporate Directors"
             intro="Four Corporate Directorates — each led by a Vice Provost/Corporate Director — carry the College's mandate."
           />
           <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">

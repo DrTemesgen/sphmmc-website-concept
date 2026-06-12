@@ -77,14 +77,14 @@ export const HISTORY = {
   growth:
     "Today SPHMMC is one of the country's premier academic medical centres: more than 700 inpatient beds, around 1,200 emergency and outpatient visits every day, and over 2,800 clinical, academic and support staff. The College pioneered Ethiopia's first kidney transplant centre and runs specialised facilities for cardiac intervention, fertility treatment, burn care, oncology and minimally invasive surgery — while training thousands of physicians, specialists, nurses, midwives and public-health professionals.",
   restructure2026:
-    "In 2026, endorsed by the Governing Board, the College adopted a new organisational structure under a Provost/CED and four Corporate Directorates: Administration & Business Development, Academic & Medical Service, Research & Community Service, and Quality & Innovation. The structure recognises three specialty centres (the Renal Transplant Centre, the Infertility Centre and the Cardiac Catheterisation Laboratory) and Aabet Hospital as the College's first affiliated health institution.",
+    "In 2026, endorsed by the Governing Board, the College adopted a new organisational structure under a Provost and four Corporate Directorates: Administration & Business Development, Academic & Medical Service, Research & Community Service, and Quality & Innovation. The structure recognises three specialty centres (the Renal Transplant Centre, the Infertility Centre and the Cardiac Catheterisation Laboratory) and Aabet Hospital as the College's first affiliated health institution.",
   milestones: [
     { year: "1968", event: "Saint Paul's Hospital founded by Emperor Haile Selassie I with the German Evangelical Church." },
     { year: "2007", event: "Medical school opens — Ethiopia's first integrated modular, problem-based curriculum." },
     { year: "2011", event: "Council of Ministers Regulation No. 200/2011 formally establishes the College." },
     { year: "2015", event: "Ethiopia's first kidney transplant centre opens at SPHMMC." },
     { year: "2022", event: "School of Nursing established; postgraduate nursing programmes expand." },
-    { year: "2026", event: "New organisational structure adopted — Provost/CED with four Corporate Directorates, three specialty centres, and Aabet Hospital affiliated." },
+    { year: "2026", event: "New organisational structure adopted — Provost with four Corporate Directorates, three specialty centres, and Aabet Hospital affiliated." },
   ],
 };
 
@@ -96,7 +96,7 @@ export const HISTORY = {
 export const LEADERSHIP = [
   {
     id: "provost",
-    title: "Provost / Chief Executive Director",
+    title: "Provost",
     name: "Dr. Muluken Tesfaye",
     bio: "Psychiatrist and health-system leader; previously Chief Executive Director of Eka Kotebe General Hospital and former President of the Ethiopian Psychiatric Association.",
     photo: "/images/leaders/provost.png",

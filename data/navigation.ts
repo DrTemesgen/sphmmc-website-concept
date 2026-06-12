@@ -69,7 +69,7 @@ export const MAIN_NAV: NavSection[] = [
     href: "/about",
     links: [
       { label: "About the College", href: "/about", description: "History, mission, vision and values" },
-      { label: "Leadership & Governance", href: "/about/leadership", description: "Board, Senate, Provost/CED and directorates" },
+      { label: "Leadership & Governance", href: "/about/leadership", description: "Board, Senate, Provost and directorates" },
       { label: "Organisational Structure", href: "/about/organogram", description: "The 2026 organogram" },
       { label: "Offices & Directorates", href: "/offices", description: "Every office on the organogram" },
       { label: "Health Education", href: "/education", description: "Public health information" },

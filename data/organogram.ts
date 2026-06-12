@@ -48,22 +48,22 @@ export const ORG_UNITS: OrgUnit[] = [
   },
   {
     id: "provost",
-    name: "Provost / Chief Executive Director (CED)",
-    shortName: "Provost/CED",
+    name: "Provost",
+    shortName: "Provost",
     reportsTo: "board",
     tier: "L0",
     note: "Chief executive and academic officer; reports to the Board and to the Ministry of Health.",
     href: "/about/leadership#provost",
   },
 
-  // ── Reporting directly to the Provost/CED ──────────────────────────────
+  // ── Reporting directly to the Provost ──────────────────────────────
   {
     id: "office-head",
-    name: "Office Head — Provost/CED Office",
+    name: "Office Head — Provost Office",
     reportsTo: "provost",
     tier: "L1-Office",
     note: "Coordinates Provost-office administration; no line-reports.",
-    href: "/offices/provost-ced-office",
+    href: "/offices/provost-office",
   },
   {
     id: "internal-audit",
@@ -298,7 +298,7 @@ export const CORPORATE_DIRECTORATES = ["cd-admin", "cd-academic", "cd-research",
   (id) => unitById(id)!
 );
 
-/** Units reporting directly to the Provost/CED (excluding the four CDs) */
+/** Units reporting directly to the Provost (excluding the four CDs) */
 export const PROVOST_DIRECT_REPORTS = ORG_UNITS.filter(
   (u) => u.reportsTo === "provost" && u.tier !== "L1-CD"
 );

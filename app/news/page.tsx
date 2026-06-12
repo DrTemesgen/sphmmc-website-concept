@@ -17,7 +17,7 @@ const announcements = [
     date: "June 2026",
     category: "Governance",
     title: "College adopts its 2026 organisational structure",
-    text: "Endorsed by the Governing Board, the College's 2026 restructure establishes a Provost/CED leading four Corporate Directorates, three specialty centres, and Aabet Hospital as the College's first affiliated institution.",
+    text: "Endorsed by the Governing Board, the College's 2026 restructure establishes a Provost leading four Corporate Directorates, three specialty centres, and Aabet Hospital as the College's first affiliated institution.",
   },
   {
     date: "Rolling",

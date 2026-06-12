@@ -7,7 +7,7 @@ export interface Office {
   slug: string;
   name: string;
   group:
-    | "Provost/CED Office"
+    | "Provost Office"
     | "Administration & Business Development"
     | "Academic & Medical Service"
     | "Research & Community Service"
@@ -19,25 +19,25 @@ export interface Office {
 }
 
 export const OFFICES: Office[] = [
-  // ── Provost/CED Office ──────────────────────────────────────────────────
+  // ── Provost Office ──────────────────────────────────────────────────
   {
-    slug: "provost-ced-office",
-    name: "Provost/CED Office",
-    group: "Provost/CED Office",
+    slug: "provost-office",
+    name: "Provost Office",
+    group: "Provost Office",
     summary:
-      "The Office of the Provost/Chief Executive Director coordinates the executive administration of the College. The Office Head manages office administration only; the audit, ethics, legal, communication and gender executives report directly to the Provost/CED.",
+      "The Office of the Provost coordinates the executive administration of the College. The Office Head manages office administration only; the audit, ethics, legal, communication and gender executives report directly to the Provost.",
     responsibilities: [
-      "Executive coordination and correspondence of the Provost/CED",
+      "Executive coordination and correspondence of the Provost",
       "Scheduling and follow-up of executive decisions",
-      "Liaison between the Provost/CED and the four Corporate Directorates",
+      "Liaison between the Provost and the four Corporate Directorates",
     ],
   },
   {
     slug: "internal-audit",
     name: "Internal Audit Executive",
-    group: "Provost/CED Office",
+    group: "Provost Office",
     summary:
-      "Provides independent, objective assurance over the College's financial and operational controls, reporting directly to the Provost/CED and supporting the Board Audit Committee.",
+      "Provides independent, objective assurance over the College's financial and operational controls, reporting directly to the Provost and supporting the Board Audit Committee.",
     responsibilities: [
       "Internal audit of financial and operational systems",
       "Risk-based audit planning and follow-up",
@@ -47,9 +47,9 @@ export const OFFICES: Office[] = [
   {
     slug: "ethics-anti-corruption",
     name: "Ethics & Anti-Corruption Executive",
-    group: "Provost/CED Office",
+    group: "Provost Office",
     summary:
-      "Promotes integrity and prevents corruption across the College, handling ethics complaints and prevention programmes, reporting directly to the Provost/CED.",
+      "Promotes integrity and prevents corruption across the College, handling ethics complaints and prevention programmes, reporting directly to the Provost.",
     responsibilities: [
       "Ethics education and corruption prevention",
       "Receipt and referral of integrity complaints",
@@ -59,7 +59,7 @@ export const OFFICES: Office[] = [
   {
     slug: "legal-service",
     name: "Legal Service Executive",
-    group: "Provost/CED Office",
+    group: "Provost Office",
     summary:
       "The College's legal office — representing the College in legal proceedings, advising governing bodies, and managing contracts and compliance. The College sues and is sued through this office.",
     responsibilities: [
@@ -72,9 +72,9 @@ export const OFFICES: Office[] = [
   {
     slug: "public-relations",
     name: "Public Relations & Communication Executive",
-    group: "Provost/CED Office",
+    group: "Provost Office",
     summary:
-      "Manages the College's public image, media relations, publications, website content and community communication, reporting directly to the Provost/CED.",
+      "Manages the College's public image, media relations, publications, website content and community communication, reporting directly to the Provost.",
     responsibilities: [
       "Media relations and official communication",
       "Website, social media and publications",
@@ -85,7 +85,7 @@ export const OFFICES: Office[] = [
   {
     slug: "gender-social-affairs",
     name: "Gender & Social Affairs Inclusion Executive",
-    group: "Provost/CED Office",
+    group: "Provost Office",
     summary:
       "Advances gender equity, disability inclusion and social affairs across the College community — staff, students and patients alike.",
     responsibilities: [
@@ -367,7 +367,7 @@ export const OFFICES: Office[] = [
 
 export const officeBySlug = (slug: string) => OFFICES.find((o) => o.slug === slug);
 export const OFFICE_GROUPS = [
-  "Provost/CED Office",
+  "Provost Office",
   "Administration & Business Development",
   "Academic & Medical Service",
   "Research & Community Service",

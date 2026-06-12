@@ -12,7 +12,7 @@ import { PageHero, Breadcrumbs, SectionHeading } from "@/components/ui";
 export const metadata: Metadata = {
   title: "Organisational Structure 2026",
   description:
-    "The locked 2026 organogram of SPHMMC — Ministry of Health, Governing Board, Provost/CED, four Corporate Directorates, specialty centres and all offices.",
+    "The locked 2026 organogram of SPHMMC — Ministry of Health, Governing Board, Provost, four Corporate Directorates, specialty centres and all offices.",
 };
 
 function UnitChip({ unit, accent = false }: { unit: OrgUnit; accent?: boolean }) {
@@ -74,14 +74,14 @@ export default function OrganogramPage() {
           </div>
           <span aria-hidden className="h-5 w-0.5 bg-brand/40" />
           <div className="w-full rounded-lg bg-brand px-4 py-3 font-display font-bold text-white">
-            PROVOST / CED
-            <span className="block text-[11px] font-normal text-white/80">Chief Executive Director (L0)</span>
+            PROVOST
+            <span className="block text-[11px] font-normal text-white/80">Chief executive and academic officer (L0)</span>
           </div>
         </div>
 
         {/* Direct reports */}
         <SectionHeading
-          eyebrow="Reporting directly to the Provost/CED"
+          eyebrow="Reporting directly to the Provost"
           title="Executive Offices & Affiliated Institution"
         />
         <div className="mb-12 grid gap-2 sm:grid-cols-2 lg:grid-cols-4">
@@ -114,8 +114,8 @@ export default function OrganogramPage() {
             This organogram is the College&apos;s 2026 organisational structure. Specialty centres
             (gold) report directly to the Academic &amp; Medical Service Vice Provost/Corporate
             Director, parallel to the two Vice Corporate Directors. Aabet Hospital is the
-            College&apos;s first affiliated health institution, reporting to the Provost/CED. The
-            structure may be amended by the Board upon recommendation of the Provost/CED and approval
+            College&apos;s first affiliated health institution, reporting to the Provost. The
+            structure may be amended by the Board upon recommendation of the Provost and approval
             of the Senate.
           </p>
           <p className="mt-3">

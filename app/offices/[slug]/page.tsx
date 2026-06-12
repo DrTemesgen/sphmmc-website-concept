@@ -49,8 +49,8 @@ export default async function OfficePage({
 
         <p className="mt-8 rounded-lg bg-paper p-4 text-sm text-muted">
           Part of{" "}
-          {office.group === "Provost/CED Office"
-            ? "the offices reporting directly to the Provost/CED"
+          {office.group === "Provost Office"
+            ? "the offices reporting directly to the Provost"
             : `the ${office.group} Corporate Directorate`}{" "}
           on the{" "}
           <Link href="/about/organogram" className="font-semibold text-brand hover:underline">

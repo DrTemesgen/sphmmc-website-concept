@@ -70,7 +70,7 @@ export const CENTERS: Center[] = [
     kind: "affiliated-hospital",
     tagline: "The College's first affiliated health institution.",
     overview:
-      "Aabet Hospital is the first health institution affiliated to the College. Operating under a written affiliation agreement while retaining its own internal governance, Aabet Hospital reports to the Provost/CED and extends the College's clinical service, training and research platforms — with a major role in trauma and surgical care.",
+      "Aabet Hospital is the first health institution affiliated to the College. Operating under a written affiliation agreement while retaining its own internal governance, Aabet Hospital reports to the Provost and extends the College's clinical service, training and research platforms — with a major role in trauma and surgical care.",
     teams: [],
     trainingRole: "Clinical training and service-expansion site of the College.",
   },

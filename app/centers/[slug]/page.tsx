@@ -95,7 +95,7 @@ export default async function CenterPage({
               <p className="mt-2">
                 {center.kind === "specialty-centre"
                   ? "Reports directly to the Academic & Medical Service Vice Provost/Corporate Director, parallel to the two Vice Corporate Directors."
-                  : "Operates under a written affiliation agreement, reporting to the Provost/CED while retaining its own internal governance."}
+                  : "Operates under a written affiliation agreement, reporting to the Provost while retaining its own internal governance."}
               </p>
             </div>
           </aside>
