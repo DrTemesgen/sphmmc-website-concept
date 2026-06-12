@@ -1,7 +1,6 @@
 /**
- * Academic departments — per the Senate Legislation 2026, Article 68
- * (School of Medicine clinical and preclinical departments) and the
- * school structures under Articles 50, 53 and 64.
+ * Academic departments of the College's schools (clinical, preclinical and
+ * academic departments).
  *
  * Faculty lists are placeholders pending the official roster from the
  * Registrar & Alumni Directorate — replace before go-live.
@@ -33,7 +32,7 @@ const f = (role: string): FacultyMember[] => [
 ];
 
 export const DEPARTMENTS: Department[] = [
-  // ════════ School of Medicine — clinical departments (Art. 68(2)) ════════
+  // ════════ School of Medicine — clinical departments ════════
   {
     slug: "internal-medicine",
     name: "Internal Medicine",
@@ -248,7 +247,7 @@ export const DEPARTMENTS: Department[] = [
     faculty: f("Department Head"),
   },
 
-  // ════════ School of Medicine — preclinical departments (Art. 68(3)) ═════
+  // ════════ School of Medicine — preclinical departments ═════
   {
     slug: "anatomy",
     name: "Anatomy",
@@ -310,7 +309,7 @@ export const DEPARTMENTS: Department[] = [
     school: "medicine",
     type: "preclinical",
     overview:
-      "Positioned within the School of Medicine (Senate Legislation 2026, Art. 64(3)), the Department of Pharmacology teaches the science of drugs and therapeutics and supports rational-prescribing and pharmacovigilance initiatives.",
+      "Positioned within the School of Medicine, the Department of Pharmacology teaches the science of drugs and therapeutics and supports rational-prescribing and pharmacovigilance initiatives.",
     services: ["Pharmacology teaching", "Pharmacovigilance and drug-information support", "Rational prescribing programmes"],
     programs: ["MSc in Pharmacology", "Undergraduate preclinical teaching"],
     faculty: f("Department Head"),
@@ -360,7 +359,7 @@ export const DEPARTMENTS: Department[] = [
     school: "pharmacy",
     type: "academic",
     overview:
-      "The Pharmacy & Service unit operates as both an academic programme and the pharmacy service of the College (Senate Legislation 2026, Art. 64) — training pharmacists while running inpatient, outpatient and clinical pharmacy services.",
+      "The Pharmacy & Service unit operates as both an academic programme and the pharmacy service of the College — training pharmacists while running inpatient, outpatient and clinical pharmacy services.",
     services: ["Inpatient and outpatient pharmacy services", "Clinical pharmacy and medication-therapy management", "Drug information services", "Pharmacy education (BPharm and postgraduate)"],
     programs: ["BPharm", "Postgraduate clinical pharmacy programmes"],
     faculty: f("Director"),

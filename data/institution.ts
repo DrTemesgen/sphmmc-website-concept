@@ -1,15 +1,17 @@
 /**
- * Institutional identity — verbatim from the Senate Legislation of
- * Saint Paul's Hospital Millennium Medical College of 2026, Article 10
- * (Vision, Mission and Core Values) and Article 11 (Objectives).
+ * Institutional identity.
+ * Vision, mission and core values reflect the College's current 2026 statements.
+ * Contact details, tagline and statistics verified against sphmmc.edu.et
+ * (crawled June 2026).
  */
 
 export const INSTITUTION = {
   name: "Saint Paul's Hospital Millennium Medical College",
+  shortName: "St. Paul's Hospital Millennium Medical College",
   acronym: "SPHMMC",
+  tagline: "Our Speciality, Your Well-Being",
   established:
     "Established by the Council of Ministers Regulation No. 200/2011; accountable to the Federal Ministry of Health through its Governing Board.",
-  location: "Gulele Sub-City, Swaziland Street, Addis Ababa, Ethiopia",
 
   vision:
     "To be a centre of excellence in specialised healthcare, postgraduate education, high-level evidence-generating research, and health innovation in Ethiopia and the Horn of Africa.",
@@ -34,50 +36,96 @@ export const INSTITUTION = {
   ],
 
   dualMandate:
-    "The College operates under a dual mandate as both a higher education institution and a teaching hospital — integrating education, research, clinical service, and community engagement. Where conflict arises between patient safety and an academic activity, patient safety prevails (Senate Legislation 2026, Art. 15).",
+    "The College operates under a dual mandate as both a higher education institution and a teaching hospital — integrating education, research, clinical service, and community engagement. Where conflict arises between patient safety and an academic activity, patient safety prevails.",
 
-  // Headline statistics — update from the Public Relations & Communication
-  // Executive's latest figures before each publication cycle.
+  // Headline statistics — from the College's published figures (verify with the
+  // Public Relations & Communication Executive before each publication cycle).
   stats: [
-    { value: "700+", label: "Hospital beds" },
-    { value: "2,200+", label: "Students in training" },
-    { value: "30+", label: "Residency & fellowship programmes" },
-    { value: "1M+", label: "Patient visits per year" },
+    { value: "700+", label: "Inpatient beds" },
+    { value: "1,200", label: "Daily emergency & outpatient visits" },
+    { value: "2,800+", label: "Clinical, academic & support staff" },
+    { value: "75+", label: "Academic programmes — MD to PhD" },
   ],
 
   contact: {
-    address: "Swaziland Street, Gulele Sub-City, Addis Ababa, Ethiopia",
+    address: "Gulele Sub-City, Addis Ababa, Ethiopia",
     poBox: "P.O. Box 1271, Addis Ababa",
-    phone: "+251 11 273 5717",
-    hotline: "905",
+    phone: "+251 112 75 01 25",
+    shortCode: "976",
     email: "info@sphmmc.edu.et",
     website: "https://sphmmc.edu.et",
   },
 
   social: {
-    facebook: "https://www.facebook.com/SPHMMC",
-    twitter: "https://twitter.com/sphmmc1",
-    youtube: "https://www.youtube.com/@sphmmc",
-    telegram: "https://t.me/sphmmc",
-    linkedin: "https://www.linkedin.com/school/sphmmc/",
+    facebook: "https://www.facebook.com/sphmmc/",
+    instagram: "https://www.instagram.com/sphmmc/",
+    youtube: "https://www.youtube.com/channel/UCU6zMg4MrgmXzFAyTBh9LMg",
+  },
+
+  portals: {
+    studentPortal: "https://portal.sphmmc.edu.et/",
+    cpid: "https://cpid.sphmmc.edu.et/",
+    journal: "http://mjh.sphmmc.edu.et",
   },
 };
 
 export const HISTORY = {
   founding:
-    "Saint Paul's Hospital was founded in 1968 by Emperor Haile Selassie I, with the support of the German Evangelical Church, to serve economically disadvantaged communities. For decades the hospital provided free care to the majority of its patients, growing into one of Ethiopia's largest public referral hospitals.",
+    "Saint Paul's Hospital was established in 1968 through a visionary collaboration between Emperor Haile Selassie I and the German Evangelical Church. Initially serving as a general and referral hospital, it provided essential healthcare to patients from all corners of Ethiopia — focusing on general medicine, surgery, paediatrics and obstetrics — with free care for the majority of its patients.",
   millennium:
-    "In 2007, by decision of the Council of Ministers, the hospital was elevated into a medical college — Saint Paul's Hospital Millennium Medical College — marking the Ethiopian Millennium and answering the country's critical shortage of physicians. The first cohort of medical students was admitted in 2008.",
+    "Acknowledging the critical shortage of medical professionals in Ethiopia, the Federal Ministry of Health transformed Saint Paul's Hospital into a teaching institution. The medical school opened in 2007 — marking the Ethiopian Millennium — and the College was formally established by decree of the Council of Ministers (Regulation No. 200/2011). SPHMMC pioneered Ethiopia's first integrated modular and hybrid problem-based undergraduate medical curriculum.",
   growth:
-    "Since then, SPHMMC has grown into Ethiopia's second-largest medical school and a national leader in specialised clinical care: home to the country's first kidney transplant centre, a national referral hub for maternal health, trauma, cancer care, and a rapidly expanding portfolio of residency, fellowship, and postgraduate programmes.",
-  legislation2026:
-    "In 2026, the College Senate adopted a consolidated Senate Legislation — endorsed by the Governing Board — that restructured the College under a Provost/CED and four Corporate Directorates: Administration & Business Development, Academic & Medical Service, Research & Community Service, and Quality & Innovation. The structure recognises three specialty centres (Renal Transplant Centre, Infertility Centre, Cardiac Catheterisation Laboratory) and Aabet Hospital as the College's first affiliated health institution.",
+    "Today SPHMMC is one of the country's premier academic medical centres: more than 700 inpatient beds, around 1,200 emergency and outpatient visits every day, and over 2,800 clinical, academic and support staff. The College pioneered Ethiopia's first kidney transplant centre and runs specialised facilities for cardiac intervention, fertility treatment, burn care, oncology and minimally invasive surgery — while training thousands of physicians, specialists, nurses, midwives and public-health professionals.",
+  restructure2026:
+    "In 2026, endorsed by the Governing Board, the College adopted a new organisational structure under a Provost/CED and four Corporate Directorates: Administration & Business Development, Academic & Medical Service, Research & Community Service, and Quality & Innovation. The structure recognises three specialty centres (the Renal Transplant Centre, the Infertility Centre and the Cardiac Catheterisation Laboratory) and Aabet Hospital as the College's first affiliated health institution.",
   milestones: [
-    { year: "1968", event: "Saint Paul's Hospital founded by Emperor Haile Selassie I to serve underprivileged communities." },
-    { year: "2007", event: "Elevated to Saint Paul's Hospital Millennium Medical College by the Council of Ministers." },
-    { year: "2008", event: "First medical students admitted." },
+    { year: "1968", event: "Saint Paul's Hospital founded by Emperor Haile Selassie I with the German Evangelical Church." },
+    { year: "2007", event: "Medical school opens — Ethiopia's first integrated modular, problem-based curriculum." },
     { year: "2011", event: "Council of Ministers Regulation No. 200/2011 formally establishes the College." },
-    { year: "2015", event: "Ethiopia's first living-donor kidney transplant performed at the National Kidney Transplant Centre." },
-    { year: "2026", event: "Senate Legislation 2026 adopted — new governance structure with four Corporate Directorates and three specialty centres." },
+    { year: "2015", event: "Ethiopia's first kidney transplant centre opens at SPHMMC." },
+    { year: "2022", event: "School of Nursing established; postgraduate nursing programmes expand." },
+    { year: "2026", event: "New organisational structure adopted — Provost/CED with four Corporate Directorates, three specialty centres, and Aabet Hospital affiliated." },
   ],
 };
+
+/**
+ * Current officeholders, mapped to the 2026 statutory titles.
+ * Names verified from sphmmc.edu.et leader pages (June 2026) — confirm with the
+ * Public Relations & Communication Executive before go-live.
+ */
+export const LEADERSHIP = [
+  {
+    id: "provost",
+    title: "Provost / Chief Executive Director",
+    name: "Dr. Muluken Tesfaye",
+    bio: "Psychiatrist and health-system leader; previously Chief Executive Director of Eka Kotebe General Hospital and former President of the Ethiopian Psychiatric Association.",
+    photo: "/images/leaders/provost.png",
+  },
+  {
+    id: "admin",
+    title: "Administration & Business Development Vice Provost/Corporate Director",
+    name: "Mr. Jemal Shifa Mussa",
+    bio: "Public-health professional (BSc, Dilla University; MPH, Addis Continental Institute of Public Health); previously Chief Executive Director of Werabe Comprehensive Specialized Hospital.",
+    photo: "/images/leaders/admin-vp.jpg",
+  },
+  {
+    id: "academic",
+    title: "Academic & Medical Service Vice Provost/Corporate Director",
+    name: "Dr. Lemi Belay",
+    bio: "Associate Professor of Obstetrics & Gynaecology and a distinguished researcher, educator and trainer with more than 65 publications in leading international journals. He has contributed to WHO protocols and guidelines and served as Clinical Vice Chair of the Department of Obstetrics & Gynaecology.",
+    photo: "/images/leaders/academic-vp.png",
+  },
+  {
+    id: "research",
+    title: "Research & Community Service Vice Provost/Corporate Director",
+    name: "Dr. Ewenat Gebrehanna",
+    bio: "Associate Professor of Public Health (PhD, University of Gondar; MPH, Addis Ababa University); at SPHMMC since 2017.",
+    photo: "/images/leaders/research-vp.png",
+  },
+  {
+    id: "quality",
+    title: "Quality & Innovation Vice Provost/Corporate Director",
+    name: "Dr. Tigist Bacha",
+    bio: "Associate Professor of Paediatric Emergency & Critical Care (MD, MPH) and a pioneer of acute paediatric care — Ethiopia's first paediatric emergency and intensive-care physician, who founded the country's first Paediatric ICU. Appointed Vice Provost for Academic & Medical Service Quality and Corporate Director of Innovation in December 2025.",
+  },
+];

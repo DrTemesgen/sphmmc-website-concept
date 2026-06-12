@@ -1,11 +1,8 @@
 /**
- * SPHMMC Organisational Structure — 2026 LOCKED BASELINE
- * Source: SPHMMC_2026_Board_Evidence_Package / 04_Organogram_2026.xlsx (Master sheet)
- * and the Senate Legislation of Saint Paul's Hospital Millennium Medical College of 2026
- * (Articles 14, 50–53, 68, 69, 97–102).
+ * SPHMMC Organisational Structure — 2026.
  *
  * This is the authoritative reporting-line table. Do not edit unit names or
- * reporting lines without a corresponding Board-approved amendment to Schedule 1.
+ * reporting lines without a corresponding Board-approved amendment.
  */
 
 export type Tier =
@@ -39,14 +36,14 @@ export const ORG_UNITS: OrgUnit[] = [
     name: "Ministry of Health",
     reportsTo: null,
     tier: "Ministry",
-    note: "Sole parent ministry — Reg. 200/2011 Art. 2 (accountability under Art. 6).",
+    note: "Sole parent ministry of the College (Council of Ministers Regulation No. 200/2011).",
   },
   {
     id: "board",
     name: "Governing Board",
     reportsTo: "moh",
     tier: "Board",
-    note: "Supreme governing body of the College (Proclamation No. 1152/2019, Art. 44(2)).",
+    note: "Supreme governing body of the College (Higher Education Proclamation No. 1152/2019).",
     href: "/about/leadership#board",
   },
   {
@@ -108,7 +105,7 @@ export const ORG_UNITS: OrgUnit[] = [
     name: "Aabet Hospital",
     reportsTo: "provost",
     tier: "L1-Unit",
-    note: "First health institution affiliated to the College (Senate Legislation 2026, Art. 102(4)).",
+    note: "First health institution affiliated to the College.",
     href: "/centers/aabet-hospital",
   },
 
@@ -175,7 +172,7 @@ export const ORG_UNITS: OrgUnit[] = [
     name: "Academic Vice Corporate Director",
     reportsTo: "cd-academic",
     tier: "L2-VCD",
-    note: "Operational deputy — not a statutory Vice Provost (Senate Legislation 2026, Art. 50).",
+    note: "Operational deputy — not a statutory Vice Provost.",
   },
   { id: "som", name: "School of Medicine & Medical Service Director", shortName: "School of Medicine", reportsTo: "academic-vcd", tier: "L3", href: "/academics/schools/medicine" },
   { id: "snm", name: "School of Nursing, Midwifery & Medical Service Director", shortName: "School of Nursing & Midwifery", reportsTo: "academic-vcd", tier: "L3", href: "/academics/schools/nursing-midwifery" },
@@ -186,7 +183,7 @@ export const ORG_UNITS: OrgUnit[] = [
     name: "Other Health Science School",
     reportsTo: "academic-vcd",
     tier: "L3",
-    note: "Future-opening unit (Senate Legislation 2026, Art. 53(2)(d)).",
+    note: "Future-opening unit.",
   },
   { id: "registrar", name: "Registrar & Alumni Director", reportsTo: "academic-vcd", tier: "L3", href: "/offices/registrar-alumni" },
   { id: "library", name: "Library", reportsTo: "academic-vcd", tier: "L3", href: "/offices/library" },
@@ -195,7 +192,7 @@ export const ORG_UNITS: OrgUnit[] = [
     name: "Medical Service Vice Corporate Director",
     reportsTo: "cd-academic",
     tier: "L2-VCD",
-    note: "Operational deputy — not a statutory Vice Provost (Senate Legislation 2026, Art. 51).",
+    note: "Operational deputy — not a statutory Vice Provost.",
   },
   { id: "msf", name: "Medical Services Facilitation Directorate", reportsTo: "medical-vcd", tier: "L3", href: "/patient-care/directorates/medical-services-facilitation" },
   { id: "or", name: "Operation Room Directorate", reportsTo: "medical-vcd", tier: "L3", href: "/patient-care/directorates/operation-room" },
@@ -210,7 +207,7 @@ export const ORG_UNITS: OrgUnit[] = [
     name: "Renal Transplant Centre",
     reportsTo: "cd-academic",
     tier: "L2-Centre",
-    note: "Specialty centre, parallel to the two Vice CDs (Senate Legislation 2026, Art. 98).",
+    note: "Specialty centre, parallel to the two Vice CDs.",
     href: "/centers/renal-transplant",
   },
   {
@@ -218,7 +215,7 @@ export const ORG_UNITS: OrgUnit[] = [
     name: "Infertility Centre",
     reportsTo: "cd-academic",
     tier: "L2-Centre",
-    note: "Specialty centre, parallel to the two Vice CDs (Senate Legislation 2026, Art. 99).",
+    note: "Specialty centre, parallel to the two Vice CDs.",
     href: "/centers/infertility",
   },
   {
@@ -226,7 +223,7 @@ export const ORG_UNITS: OrgUnit[] = [
     name: "Cardiac Catheterisation Laboratory",
     reportsTo: "cd-academic",
     tier: "L2-Centre",
-    note: "Specialty centre, parallel to the two Vice CDs (Senate Legislation 2026, Art. 100).",
+    note: "Specialty centre, parallel to the two Vice CDs.",
     href: "/centers/cardiac-cath-lab",
   },
 
