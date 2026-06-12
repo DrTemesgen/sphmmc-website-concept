@@ -24,10 +24,11 @@ export default function AcademicsPage() {
       <section className="mx-auto max-w-7xl px-4 py-14">
         <div className="mb-10 overflow-hidden rounded-2xl border border-line">
           <Image
-            src="/images/community/students.png"
-            alt="SPHMMC students in white coats celebrating on campus"
-            width={1019}
-            height={758}
+            src="/images/campus/panorama-2x.jpg"
+            alt="Aerial view of the St. Paul's Hospital Millennium Medical College campus"
+            width={1600}
+            height={799}
+            quality={90}
             className="h-64 w-full object-cover sm:h-80"
           />
         </div>

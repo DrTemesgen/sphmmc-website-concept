@@ -29,7 +29,7 @@ export const CENTERS: Center[] = [
       "Transplant Research & Data Management Team",
     ],
     trainingRole: "Training site for nephrology, urology and transplant-surgery fellowship programmes.",
-    image: { src: "/images/lab/all-labs.png", alt: "Transplant immunology and laboratory facilities" },
+    image: { src: "/images/campus/facade.png", alt: "The St. Paul's main hospital — home of Ethiopia's first kidney transplant programme" },
   },
   {
     slug: "infertility",
