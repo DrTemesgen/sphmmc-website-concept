@@ -96,11 +96,12 @@ export default function InitiativesPage() {
           </div>
           <div className="overflow-hidden rounded-2xl border border-line">
             <Image
-              src="/images/lab/all-labs.png"
-              alt="Advanced molecular laboratory equipment at the IDREAM Lab — PCR systems, analysers and an automated blood-culture system"
-              width={1384}
-              height={1136}
-              className="h-full w-full object-cover"
+              src="/images/community/innovation-workshop.jpg"
+              alt="SPHMMC clinicians collaborating around a table of hands-on teaching and prototyping materials"
+              width={1319}
+              height={1600}
+              quality={90}
+              className="h-full max-h-[34rem] w-full object-cover"
             />
           </div>
         </div>

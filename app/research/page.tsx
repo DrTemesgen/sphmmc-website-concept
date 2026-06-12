@@ -67,11 +67,12 @@ export default function ResearchPage() {
       <section className="mx-auto max-w-7xl px-4 pt-10">
         <div className="overflow-hidden rounded-2xl border border-line">
           <Image
-            src="/images/lab/all-labs.png"
-            alt="Molecular research laboratory at SPHMMC"
-            width={1400}
-            height={460}
+            src="/images/clinical/lab-amr.jpg"
+            alt="Antibiotic-susceptibility culture plate in the SPHMMC research laboratory"
+            width={1600}
+            height={720}
             priority
+            quality={90}
             className="h-52 w-full object-cover sm:h-64"
           />
         </div>
