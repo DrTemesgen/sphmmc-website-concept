@@ -55,6 +55,7 @@ export default function Footer() {
               <li><Link href="/academics/programs" className="hover:text-white hover:underline">Programmes A–Z</Link></li>
               <li><Link href="/academics/departments" className="hover:text-white hover:underline">Departments A–Z</Link></li>
               <li><Link href="/academics/staff" className="hover:text-white hover:underline">Faculty &amp; Staff</Link></li>
+              <li><Link href="/academics/examination-centre" className="hover:text-white hover:underline">Examination Centre (PACE)</Link></li>
               <li><Link href="/research" className="hover:text-white hover:underline">Research</Link></li>
               <li><Link href="/offices" className="hover:text-white hover:underline">Offices & directorates</Link></li>
               <li><Link href="/about/organogram" className="hover:text-white hover:underline">Organisational structure</Link></li>

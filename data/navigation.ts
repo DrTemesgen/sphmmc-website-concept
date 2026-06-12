@@ -46,6 +46,7 @@ export const MAIN_NAV: NavSection[] = [
       { label: "School of Public Health", href: "/academics/schools/public-health" },
       { label: "Pharmacy & Service", href: "/academics/schools/pharmacy" },
       { label: "Departments A–Z", href: "/academics/departments" },
+      { label: "Examination & Assessment Centre", href: "/academics/examination-centre", description: "PACE — Centre of Excellence" },
       { label: "Faculty & Staff", href: "/academics/staff", description: "Profiles across all departments" },
       { label: "Submit Staff Profile", href: "/academics/staff/submit", description: "For SPHMMC academic staff" },
       { label: "Student Portal / Registrar", href: "https://portal.sphmmc.edu.et/", external: true },

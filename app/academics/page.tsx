@@ -64,6 +64,30 @@ export default function AcademicsPage() {
         </div>
       </section>
 
+      {/* PACE — Examination & Assessment Centre */}
+      <section className="mx-auto max-w-7xl px-4 pb-14">
+        <Link
+          href="/academics/examination-centre"
+          className="group grid items-center gap-6 overflow-hidden rounded-2xl bg-gradient-to-br from-navy to-brand p-8 text-white transition hover:shadow-2xl lg:grid-cols-3"
+        >
+          <div className="lg:col-span-2">
+            <p className="font-display text-sm font-bold uppercase tracking-widest text-gold">Centre of Excellence</p>
+            <h2 className="mt-2 font-display text-2xl font-bold sm:text-3xl">PACE — Examination &amp; Assessment Centre</h2>
+            <p className="mt-2 max-w-2xl text-sm leading-relaxed text-white/85">
+              Secure computer-based testing, OSCE clinical exams and standardized patients — fair,
+              high-stakes assessment built to international best practice, ready to support Ethiopia&apos;s
+              national licensing examination.
+            </p>
+            <span className="mt-3 inline-block font-bold text-gold group-hover:underline">Explore PACE →</span>
+          </div>
+          <div className="grid grid-cols-3 gap-3 text-center">
+            {[["CBT", "Computer-based"], ["OSCE", "Clinical exams"], ["SP", "Standardized patients"]].map(([k, v]) => (
+              <div key={k}><p className="font-display text-2xl font-bold text-gold">{k}</p><p className="text-[11px] text-white/75">{v}</p></div>
+            ))}
+          </div>
+        </Link>
+      </section>
+
       <section className="bg-paper py-14">
         <div className="mx-auto max-w-7xl px-4">
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
