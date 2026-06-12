@@ -1,15 +1,18 @@
 import { promises as fs } from "fs";
 import path from "path";
+import os from "os";
 import { DOCTORS } from "@/data/doctors";
 
 export const runtime = "nodejs";
 
 /**
- * Demo-grade booking store: appointments are persisted to a JSON file.
- * Replace with the Medplum FHIR Appointment API when the EMR integration
- * goes live (see lib/booking.ts for the provider abstraction and mapping).
+ * Demo-grade booking store: appointments are persisted to a JSON file in a
+ * writable temp directory (works locally and on serverless hosts like Vercel,
+ * where it is ephemeral — fine for a demo). Persistence is best-effort: if the
+ * write fails, the confirmation is still returned so the demo flow completes.
+ * Replace with the Medplum FHIR Appointment API for production.
  */
-const DATA_DIR = path.join(process.cwd(), ".data");
+const DATA_DIR = path.join(os.tmpdir(), "sphmmc-demo");
 const BOOKINGS_FILE = path.join(DATA_DIR, "bookings.json");
 
 interface StoredBooking {
@@ -92,17 +95,6 @@ export async function POST(request: Request) {
     return Response.json({ error: "Invalid date or time" }, { status: 400 });
   }
 
-  const bookings = await readBookings();
-  const taken = bookings.some(
-    (b) => b.doctorId === doctorId && b.date === date && b.start === start
-  );
-  if (taken) {
-    return Response.json(
-      { error: "That time was just booked. Please pick another slot." },
-      { status: 409 }
-    );
-  }
-
   const booking: StoredBooking = {
     reference: makeReference(),
     doctorId,
@@ -118,8 +110,21 @@ export async function POST(request: Request) {
     createdAt: new Date().toISOString(),
   };
 
-  bookings.push(booking);
-  await writeBookings(bookings);
+  // Best-effort persistence + conflict check. On a read-only/ephemeral
+  // filesystem this is skipped so the demo confirmation still succeeds.
+  try {
+    const bookings = await readBookings();
+    if (bookings.some((b) => b.doctorId === doctorId && b.date === date && b.start === start)) {
+      return Response.json(
+        { error: "That time was just booked. Please pick another slot." },
+        { status: 409 }
+      );
+    }
+    bookings.push(booking);
+    await writeBookings(bookings);
+  } catch {
+    // ignore — demo confirmation is returned regardless
+  }
 
   return Response.json({
     reference: booking.reference,

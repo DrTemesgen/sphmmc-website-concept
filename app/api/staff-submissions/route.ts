@@ -1,5 +1,6 @@
 import { promises as fs } from "fs";
 import path from "path";
+import os from "os";
 import { DEPARTMENTS } from "@/data/departments";
 
 export const runtime = "nodejs";
@@ -14,7 +15,7 @@ export const runtime = "nodejs";
  * Demo-grade storage in .data/staff-submissions.json. For production, route
  * these to an inbox/CMS/approval queue and notify the relevant Dean.
  */
-const DATA_DIR = path.join(process.cwd(), ".data");
+const DATA_DIR = path.join(os.tmpdir(), "sphmmc-demo");
 const FILE = path.join(DATA_DIR, "staff-submissions.json");
 
 interface Submission {
@@ -97,9 +98,15 @@ export async function POST(request: Request) {
     submittedAt: new Date().toISOString(),
   };
 
-  const items = await read();
-  items.push(submission);
-  await write(items);
+  // Best-effort persistence — on a read-only/ephemeral filesystem the
+  // submission confirmation is still returned so the demo flow completes.
+  try {
+    const items = await read();
+    items.push(submission);
+    await write(items);
+  } catch {
+    // ignore in the demo
+  }
 
   return Response.json({ reference: submission.reference, status: "pending" });
 }
