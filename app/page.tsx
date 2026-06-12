@@ -5,6 +5,7 @@ import { CENTERS } from "@/data/centers";
 import { SCHOOLS, SCHOOL_IMAGES } from "@/data/schools";
 import { SectionHeading, CTAButton } from "@/components/ui";
 import FacebookFeed from "@/components/FacebookFeed";
+import AskChips from "@/components/assistant/AskChips";
 
 const actionCards = [
   {
@@ -310,9 +311,10 @@ export default function HomePage() {
               <a href="tel:976" className="font-bold underline">976</a> or come directly to our
               24/7 emergency department.
             </p>
+            <AskChips />
             <p className="mt-5 text-sm text-muted">
               Look for the <span className="font-bold text-brand">chat button</span> at the bottom-right
-              of every page.
+              of every page — or tap a question above to start.
             </p>
           </div>
           <div>
@@ -327,7 +329,12 @@ export default function HomePage() {
                   Admissions, entrance exams, research calls and public notices →
                 </p>
               </Link>
-              <FacebookFeed />
+              <FacebookFeed height={430} />
+              <p className="text-right text-sm">
+                <Link href="/news" className="font-bold text-brand hover:underline">
+                  More news &amp; the full feed →
+                </Link>
+              </p>
             </div>
           </div>
         </div>

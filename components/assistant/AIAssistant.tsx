@@ -56,6 +56,19 @@ export default function AIAssistant() {
     listRef.current?.scrollTo({ top: listRef.current.scrollHeight, behavior: "smooth" });
   }, [messages, open]);
 
+  // Allow any page to open the assistant (optionally pre-asking a question) via
+  // window.dispatchEvent(new CustomEvent("sphmmc:ask", { detail: "question" })).
+  const sendRef = useRef<(text: string) => void>(() => {});
+  useEffect(() => {
+    const onAsk = (e: Event) => {
+      setOpen(true);
+      const q = (e as CustomEvent<string>).detail;
+      if (q) sendRef.current(q);
+    };
+    window.addEventListener("sphmmc:ask", onAsk);
+    return () => window.removeEventListener("sphmmc:ask", onAsk);
+  }, []);
+
   async function send(text: string) {
     const trimmed = text.trim();
     if (!trimmed || busy) return;
@@ -93,6 +106,7 @@ export default function AIAssistant() {
       setBusy(false);
     }
   }
+  sendRef.current = send;
 
   return (
     <>
