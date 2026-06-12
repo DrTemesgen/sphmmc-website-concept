@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { STAFF, staffBySlug } from "@/data/staff";
 import { departmentBySlug } from "@/data/departments";
 import { PageHero, Breadcrumbs } from "@/components/ui";
+import PublicationList from "@/components/PublicationList";
 
 export function generateStaticParams() {
   return STAFF.filter((s) => s.status === "approved").map((s) => ({ slug: s.slug }));
@@ -112,11 +113,12 @@ export default async function StaffProfilePage({
             {staff.publications && staff.publications.length > 0 && (
               <div>
                 <h2 className="font-display text-xl font-bold text-navy">Selected Publications</h2>
-                <ul className="mt-3 space-y-2">
-                  {staff.publications.map((p, i) => (
-                    <li key={i} className="text-sm leading-relaxed text-muted">• {p}</li>
-                  ))}
-                </ul>
+                <p className="mt-1 text-sm text-muted">
+                  Tick items and use “Copy selected” to copy the references with their links.
+                </p>
+                <div className="mt-3">
+                  <PublicationList publications={staff.publications} />
+                </div>
               </div>
             )}
           </div>

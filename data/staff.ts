@@ -10,6 +10,15 @@
  * go-live. The submission form collects exactly the fields in `StaffMember`.
  */
 
+export interface Publication {
+  title: string;
+  /** Clickable link — DOI, PubMed, journal page, or a topic search */
+  url?: string;
+  /** Journal / venue */
+  venue?: string;
+  year?: string;
+}
+
 export interface StaffMember {
   id: string;
   slug: string;
@@ -25,8 +34,8 @@ export interface StaffMember {
   bio: string;
   email?: string;
   photo?: string;
-  /** Selected publications, links or ORCID — optional */
-  publications?: string[];
+  /** Selected publications — rendered as a checkable, linked list */
+  publications?: Publication[];
   status: "approved" | "pending";
   /** Mark sample/demo profiles so they can be filtered before launch */
   sample?: boolean;
@@ -45,7 +54,26 @@ export const STAFF: StaffMember[] = [
     interests: ["Diabetes & endocrinology", "Medical education", "Non-communicable diseases"],
     bio: "Sample profile. Consultant internist and endocrinologist leading the department's teaching, ward and clinic services, with a research focus on diabetes care in resource-limited settings.",
     email: "im.head@sphmmc.edu.et",
-    publications: ["Example: 20+ peer-reviewed publications in internal medicine and endocrinology"],
+    publications: [
+      {
+        title: "Glycaemic control and complications among type 2 diabetes patients at a tertiary hospital (sample)",
+        venue: "Ethiopian Journal of Health Sciences",
+        year: "2023",
+        url: "https://pubmed.ncbi.nlm.nih.gov/?term=type+2+diabetes+ethiopia+tertiary+hospital",
+      },
+      {
+        title: "Hypertension awareness, treatment and control in an urban Ethiopian population (sample)",
+        venue: "BMC Public Health",
+        year: "2022",
+        url: "https://pubmed.ncbi.nlm.nih.gov/?term=hypertension+control+ethiopia",
+      },
+      {
+        title: "Outcomes of diabetic ketoacidosis admissions in Addis Ababa (sample)",
+        venue: "Ethiopian Medical Journal",
+        year: "2021",
+        url: "https://pubmed.ncbi.nlm.nih.gov/?term=diabetic+ketoacidosis+addis+ababa",
+      },
+    ],
     status: "approved",
     sample: true,
   },
@@ -76,6 +104,20 @@ export const STAFF: StaffMember[] = [
     interests: ["Neonatology", "Newborn survival", "Child health systems"],
     bio: "Sample profile. Paediatrician and neonatologist leading newborn-care services and research aimed at reducing preterm and neonatal mortality.",
     email: "paediatrics@sphmmc.edu.et",
+    publications: [
+      {
+        title: "Predictors of neonatal mortality in a tertiary neonatal intensive care unit (sample)",
+        venue: "BMC Pediatrics",
+        year: "2023",
+        url: "https://pubmed.ncbi.nlm.nih.gov/?term=neonatal+mortality+NICU+ethiopia",
+      },
+      {
+        title: "Kangaroo mother care and survival of low-birth-weight newborns (sample)",
+        venue: "Ethiopian Journal of Pediatrics and Child Health",
+        year: "2022",
+        url: "https://pubmed.ncbi.nlm.nih.gov/?term=kangaroo+mother+care+ethiopia",
+      },
+    ],
     status: "approved",
     sample: true,
   },
@@ -106,6 +148,20 @@ export const STAFF: StaffMember[] = [
     interests: ["High-risk obstetrics", "Maternal-foetal medicine", "Safe motherhood"],
     bio: "Sample profile. High-risk obstetrics consultant leading maternity services and maternal-health research in one of Ethiopia's busiest referral maternity units.",
     email: "obgyn@sphmmc.edu.et",
+    publications: [
+      {
+        title: "Causes and trends of maternal near-miss at a tertiary referral hospital (sample)",
+        venue: "International Journal of Gynecology & Obstetrics",
+        year: "2023",
+        url: "https://pubmed.ncbi.nlm.nih.gov/?term=maternal+near+miss+ethiopia",
+      },
+      {
+        title: "Outcomes of caesarean delivery in a high-volume maternity unit (sample)",
+        venue: "BMC Pregnancy and Childbirth",
+        year: "2021",
+        url: "https://pubmed.ncbi.nlm.nih.gov/?term=caesarean+outcomes+ethiopia",
+      },
+    ],
     status: "approved",
     sample: true,
   },
