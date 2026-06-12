@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { activeSpecialties } from "@/data/doctors";
 import { INSTITUTION } from "@/data/institution";
 import { PageHero, Breadcrumbs, SectionHeading, CTAButton } from "@/components/ui";
@@ -20,6 +21,19 @@ export default function PrivateWingPage() {
         intro="The Private Wing gives you direct access to the College's most experienced consultants — in the evenings and weekends, without a referral. Book online in minutes."
       />
       <Breadcrumbs items={[{ label: "Private Wing" }]} />
+
+      <section className="mx-auto max-w-7xl px-4 pt-10">
+        <div className="overflow-hidden rounded-2xl border border-line">
+          <Image
+            src="/images/campus/oncology-tower.png"
+            alt="A modern clinical building at St. Paul's"
+            width={1400}
+            height={460}
+            priority
+            className="h-52 w-full object-cover sm:h-64"
+          />
+        </div>
+      </section>
 
       <section className="mx-auto max-w-7xl px-4 py-14">
         <div className="grid gap-10 lg:grid-cols-2">

@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { INSTITUTION } from "@/data/institution";
 import { CENTERS } from "@/data/centers";
-import { SCHOOLS } from "@/data/schools";
+import { SCHOOLS, SCHOOL_IMAGES } from "@/data/schools";
 import { SectionHeading, CTAButton } from "@/components/ui";
 import FacebookFeed from "@/components/FacebookFeed";
 
@@ -144,7 +144,7 @@ export default function HomePage() {
           intro="SPHMMC operates under a dual mandate as a teaching hospital and a higher education institution — every ward is a classroom, every patient benefits from the latest evidence."
         />
         <div className="grid gap-6 lg:grid-cols-3">
-          <article className="rounded-xl border border-line p-6">
+          <article className="flex flex-col items-center rounded-xl border border-line p-6 text-center">
             <h3 className="font-display text-2xl font-bold text-navy">Patient Care</h3>
             <p className="mt-3 text-sm leading-relaxed text-muted">
               Around 1,200 emergency and outpatient visits every day across 17 clinical departments,
@@ -155,7 +155,7 @@ export default function HomePage() {
               Getting care →
             </Link>
           </article>
-          <article className="rounded-xl border border-line p-6">
+          <article className="flex flex-col items-center rounded-xl border border-line p-6 text-center">
             <h3 className="font-display text-2xl font-bold text-navy">Education</h3>
             <p className="mt-3 text-sm leading-relaxed text-muted">
               Four schools — Medicine, Nursing &amp; Midwifery, Public Health, and Pharmacy — delivering
@@ -166,7 +166,7 @@ export default function HomePage() {
               Explore academics →
             </Link>
           </article>
-          <article className="rounded-xl border border-line p-6">
+          <article className="flex flex-col items-center rounded-xl border border-line p-6 text-center">
             <h3 className="font-display text-2xl font-bold text-navy">Research &amp; Innovation</h3>
             <p className="mt-3 text-sm leading-relaxed text-muted">
               Problem-solving research of public-health significance — coordinated by the Research
@@ -224,11 +224,20 @@ export default function HomePage() {
             <Link
               key={s.slug}
               href={`/academics/schools/${s.slug}`}
-              className="group flex h-full flex-col rounded-xl border border-line bg-white p-5 transition hover:-translate-y-0.5 hover:border-brand/40 hover:shadow-md"
+              className="group flex h-full flex-col overflow-hidden rounded-xl border border-line bg-white transition hover:-translate-y-0.5 hover:border-brand/40 hover:shadow-md"
             >
-              <h3 className="font-display text-lg font-bold text-navy group-hover:text-brand">{s.name}</h3>
-              <p className="mt-2 flex-1 text-sm leading-relaxed text-muted">{s.tagline}</p>
-              <p className="mt-3 text-sm font-bold text-brand">Visit the school →</p>
+              <Image
+                src={SCHOOL_IMAGES[s.slug].src}
+                alt={SCHOOL_IMAGES[s.slug].alt}
+                width={700}
+                height={300}
+                className="h-36 w-full object-cover"
+              />
+              <div className="flex flex-1 flex-col p-5">
+                <h3 className="font-display text-lg font-bold text-navy group-hover:text-brand">{s.name}</h3>
+                <p className="mt-2 flex-1 text-sm leading-relaxed text-muted">{s.tagline}</p>
+                <p className="mt-3 text-sm font-bold text-brand">Visit the school →</p>
+              </div>
             </Link>
           ))}
         </div>

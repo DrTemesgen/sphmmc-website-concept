@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
-import { SCHOOLS, schoolBySlug } from "@/data/schools";
+import { SCHOOLS, schoolBySlug, SCHOOL_IMAGES } from "@/data/schools";
 import { departmentsBySchool } from "@/data/departments";
 import { PageHero, Breadcrumbs, SectionHeading } from "@/components/ui";
 
@@ -39,6 +40,19 @@ export default async function SchoolPage({
     <>
       <PageHero eyebrow="Academics" title={school.name} intro={school.tagline} />
       <Breadcrumbs items={[{ label: "Academics", href: "/academics" }, { label: school.name }]} />
+
+      <section className="mx-auto max-w-7xl px-4 pt-10">
+        <div className="overflow-hidden rounded-2xl border border-line">
+          <Image
+            src={SCHOOL_IMAGES[school.slug].src}
+            alt={SCHOOL_IMAGES[school.slug].alt}
+            width={1400}
+            height={500}
+            priority
+            className="h-56 w-full object-cover sm:h-72"
+          />
+        </div>
+      </section>
 
       <section className="mx-auto max-w-7xl px-4 py-14">
         <div className="grid gap-10 lg:grid-cols-3">

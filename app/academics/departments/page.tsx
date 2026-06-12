@@ -43,7 +43,7 @@ export default function DepartmentsIndexPage() {
                   {d.name}
                 </h2>
                 <p className="mt-2 flex-1 text-sm leading-relaxed text-muted">
-                  {d.overview.split(". ")[0]}.
+                  {d.overview.split(". ")[0].replace(/\.$/, "")}.
                 </p>
                 <p className="mt-3 text-sm font-bold text-brand">View department →</p>
               </Link>

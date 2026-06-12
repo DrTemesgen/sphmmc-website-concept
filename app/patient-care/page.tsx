@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { CARE_PATHWAYS, SERVICE_DIRECTORATES } from "@/data/services";
 import { INSTITUTION } from "@/data/institution";
 import { PageHero, Breadcrumbs, SectionHeading } from "@/components/ui";
@@ -20,12 +21,25 @@ export default function PatientCarePage() {
       />
       <Breadcrumbs items={[{ label: "Patient Care" }]} />
 
+      <section className="mx-auto max-w-7xl px-4 pt-10">
+        <div className="overflow-hidden rounded-2xl border border-line">
+          <Image
+            src="/images/clinical/icu.jpg"
+            alt="A modern patient-care room at St. Paul's"
+            width={1400}
+            height={460}
+            priority
+            className="h-52 w-full object-cover sm:h-64"
+          />
+        </div>
+      </section>
+
       {/* Pathways */}
       <section className="mx-auto max-w-7xl px-4 py-14">
         <SectionHeading eyebrow="Where do I go?" title="Choose Your Path to Care" />
         <div className="grid gap-5 md:grid-cols-2">
           {CARE_PATHWAYS.map((p) => (
-            <article key={p.name} className="flex flex-col rounded-xl border border-line p-6">
+            <article key={p.name} className="flex flex-col items-center rounded-xl border border-line p-6 text-center">
               <h2 className="font-display text-xl font-bold text-navy">{p.name}</h2>
               <p className="mt-2 flex-1 text-sm leading-relaxed text-muted">{p.text}</p>
               <Link href={p.cta.href} className="mt-4 font-bold text-brand hover:underline">
@@ -99,7 +113,7 @@ export default function PatientCarePage() {
               className="group rounded-lg border border-line p-4 transition hover:border-brand/40 hover:shadow-sm"
             >
               <h3 className="font-display text-base font-bold text-navy group-hover:text-brand">{s.name}</h3>
-              <p className="mt-1.5 text-xs leading-relaxed text-muted">{s.summary.split(" — ")[0].split(". ")[0]}.</p>
+              <p className="mt-1.5 text-xs leading-relaxed text-muted">{s.summary.split(" — ")[0].split(". ")[0].replace(/\.$/, "")}.</p>
             </Link>
           ))}
         </div>

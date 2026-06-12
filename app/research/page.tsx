@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { INSTITUTION } from "@/data/institution";
 import { PageHero, Breadcrumbs, SectionHeading } from "@/components/ui";
 
@@ -62,6 +63,19 @@ export default function ResearchPage() {
         intro="Research at SPHMMC is built into the mission: generate evidence, translate it into practice, and train the researchers Ethiopia needs."
       />
       <Breadcrumbs items={[{ label: "Research" }]} />
+
+      <section className="mx-auto max-w-7xl px-4 pt-10">
+        <div className="overflow-hidden rounded-2xl border border-line">
+          <Image
+            src="/images/lab/all-labs.png"
+            alt="Molecular research laboratory at SPHMMC"
+            width={1400}
+            height={460}
+            priority
+            className="h-52 w-full object-cover sm:h-64"
+          />
+        </div>
+      </section>
 
       <section className="mx-auto max-w-7xl px-4 py-14">
         <SectionHeading eyebrow="How Research is Organised" title="The Research & Community Service Corporate Directorate" />

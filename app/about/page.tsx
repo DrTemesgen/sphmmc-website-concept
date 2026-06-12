@@ -116,7 +116,7 @@ export default function AboutPage() {
         />
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {INSTITUTION.coreValues.map((v) => (
-            <div key={v.name} className="rounded-lg border border-line p-5">
+            <div key={v.name} className="flex flex-col items-center rounded-lg border border-line p-5 text-center">
               <h3 className="font-display text-base font-bold text-brand">{v.name}</h3>
               <p className="mt-1.5 text-sm leading-relaxed text-muted">{v.text}</p>
             </div>

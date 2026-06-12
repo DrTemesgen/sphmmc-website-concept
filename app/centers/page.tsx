@@ -32,7 +32,7 @@ export default function CentersPage() {
             >
               <h2 className="font-display text-2xl font-bold text-navy group-hover:text-brand">{c.name}</h2>
               <p className="mt-2 text-sm font-semibold text-sky">{c.tagline}</p>
-              <p className="mt-3 flex-1 text-sm leading-relaxed text-muted">{c.overview.split(". ").slice(0, 2).join(". ")}.</p>
+              <p className="mt-3 flex-1 text-sm leading-relaxed text-muted">{c.overview.split(". ").slice(0, 2).join(". ").replace(/\.$/, "")}.</p>
               <p className="mt-4 font-bold text-brand">Visit the centre →</p>
             </Link>
           ))}

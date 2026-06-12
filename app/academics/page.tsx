@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { SCHOOLS } from "@/data/schools";
+import { SCHOOLS, SCHOOL_IMAGES } from "@/data/schools";
 import { INSTITUTION } from "@/data/institution";
 import { PageHero, Breadcrumbs, SectionHeading, CTAButton } from "@/components/ui";
 
@@ -37,19 +37,28 @@ export default function AcademicsPage() {
             <Link
               key={s.slug}
               href={`/academics/schools/${s.slug}`}
-              className="group rounded-xl border border-line p-6 transition hover:-translate-y-0.5 hover:border-brand/40 hover:shadow-md"
+              className="group flex flex-col overflow-hidden rounded-xl border border-line transition hover:-translate-y-0.5 hover:border-brand/40 hover:shadow-md"
             >
-              <h2 className="font-display text-2xl font-bold text-navy group-hover:text-brand">{s.name}</h2>
-              <p className="mt-2 text-sm font-semibold text-sky">{s.tagline}</p>
-              <ul className="mt-4 space-y-1.5">
-                {s.highlights.slice(0, 3).map((h, i) => (
-                  <li key={i} className="flex gap-2 text-sm text-muted">
-                    <span aria-hidden className="text-brand">•</span>
-                    {h}
-                  </li>
-                ))}
-              </ul>
-              <p className="mt-4 font-bold text-brand">Visit the school →</p>
+              <Image
+                src={SCHOOL_IMAGES[s.slug].src}
+                alt={SCHOOL_IMAGES[s.slug].alt}
+                width={700}
+                height={300}
+                className="h-40 w-full object-cover"
+              />
+              <div className="flex flex-1 flex-col p-6">
+                <h2 className="font-display text-2xl font-bold text-navy group-hover:text-brand">{s.name}</h2>
+                <p className="mt-2 text-sm font-semibold text-sky">{s.tagline}</p>
+                <ul className="mt-4 space-y-1.5">
+                  {s.highlights.slice(0, 3).map((h, i) => (
+                    <li key={i} className="flex gap-2 text-sm text-muted">
+                      <span aria-hidden className="text-brand">•</span>
+                      {h}
+                    </li>
+                  ))}
+                </ul>
+                <p className="mt-4 font-bold text-brand">Visit the school →</p>
+              </div>
             </Link>
           ))}
         </div>
