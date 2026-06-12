@@ -88,9 +88,12 @@ export default function ContactPage() {
           <div className="overflow-hidden rounded-xl border border-line">
             <iframe
               title="Map — St. Paul's Hospital Millennium Medical College, Addis Ababa"
-              src="https://www.openstreetmap.org/export/embed.html?bbox=38.7300%2C9.0570%2C38.7560%2C9.0760&layer=mapnik&marker=9.0665%2C38.7430"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.1721356825374!2d38.72562537511361!3d9.048057988690129!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b88afe0282569%3A0xdc11a3fc3a34debf!2sSt.%20Paul%27s%20Hospital%2C%20Ethiopia!5e0!3m2!1sen!2set!4v1781284814048!5m2!1sen!2set"
               className="h-full min-h-[420px] w-full"
+              style={{ border: 0 }}
+              allowFullScreen
               loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
             />
           </div>
         </div>
