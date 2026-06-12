@@ -127,5 +127,6 @@ export const LEADERSHIP = [
     title: "Quality & Innovation Vice Provost/Corporate Director",
     name: "Dr. Tigist Bacha",
     bio: "Associate Professor of Paediatric Emergency & Critical Care (MD, MPH) and a pioneer of acute paediatric care — Ethiopia's first paediatric emergency and intensive-care physician, who founded the country's first Paediatric ICU. Appointed Vice Provost for Academic & Medical Service Quality and Corporate Director of Innovation in December 2025.",
+    photo: "/images/leaders/quality-vp.jpg",
   },
 ];

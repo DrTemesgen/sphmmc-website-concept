@@ -73,10 +73,10 @@ export default function LeadershipPage() {
                     alt={l.name}
                     width={96}
                     height={96}
-                    className="h-24 w-24 rounded-full border border-line object-cover object-top"
+                    className="h-24 w-24 self-center rounded-full border border-line object-cover object-top"
                   />
                 ) : (
-                  <div className="flex h-24 w-24 items-center justify-center rounded-full bg-brand/10 font-display text-2xl font-bold text-brand" aria-hidden>
+                  <div className="flex h-24 w-24 items-center justify-center self-center rounded-full bg-brand/10 font-display text-2xl font-bold text-brand" aria-hidden>
                     {l.name.startsWith("To be") ? "—" : l.name.split(" ").slice(-2).map((w) => w[0]).join("")}
                   </div>
                 )}
