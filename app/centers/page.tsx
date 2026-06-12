@@ -28,7 +28,7 @@ export default function CentersPage() {
             <Link
               key={c.slug}
               href={`/centers/${c.slug}`}
-              className="group flex h-full flex-col rounded-xl border border-line p-6 transition hover:-translate-y-0.5 hover:border-brand/40 hover:shadow-md"
+              className="group flex h-full flex-col items-center rounded-xl border border-line p-6 text-center transition hover:-translate-y-0.5 hover:border-brand/40 hover:shadow-md"
             >
               <h2 className="font-display text-2xl font-bold text-navy group-hover:text-brand">{c.name}</h2>
               <p className="mt-2 text-sm font-semibold text-sky">{c.tagline}</p>
@@ -44,11 +44,11 @@ export default function CentersPage() {
             <Link
               key={c.slug}
               href={`/centers/${c.slug}`}
-              className="group block rounded-xl border border-gold/50 bg-gold/5 p-6 transition hover:shadow-md"
+              className="group block rounded-xl border border-gold/50 bg-gold/5 p-6 text-center transition hover:shadow-md"
             >
               <h2 className="font-display text-2xl font-bold text-navy group-hover:text-brand">{c.name}</h2>
               <p className="mt-2 text-sm font-semibold text-sky">{c.tagline}</p>
-              <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted">{c.overview}</p>
+              <p className="mx-auto mt-3 max-w-3xl text-sm leading-relaxed text-muted">{c.overview}</p>
               <p className="mt-4 font-bold text-brand">Learn more →</p>
             </Link>
           ))}

@@ -49,8 +49,8 @@ export default function NewsPage() {
             <SectionHeading eyebrow="Latest" title="Announcements" />
             <div className="space-y-5">
               {announcements.map((a, i) => (
-                <article key={i} className="rounded-xl border border-line p-6">
-                  <div className="flex flex-wrap items-center gap-2 text-xs">
+                <article key={i} className="rounded-xl border border-line p-6 text-center">
+                  <div className="flex flex-wrap items-center justify-center gap-2 text-xs">
                     <span className="rounded-full bg-brand/10 px-2.5 py-0.5 font-bold uppercase tracking-wide text-brand">
                       {a.category}
                     </span>
@@ -61,7 +61,7 @@ export default function NewsPage() {
                 </article>
               ))}
             </div>
-            <p className="mt-6 rounded-lg bg-paper p-4 text-xs leading-relaxed text-muted">
+            <p className="mt-6 rounded-lg bg-paper p-4 text-center text-xs leading-relaxed text-muted">
               Official announcements (including Amharic-language notices) are published by the
               Public Relations &amp; Communication Executive. For student-specific notices, check
               the{" "}
@@ -77,7 +77,7 @@ export default function NewsPage() {
               <SectionHeading eyebrow="Newsroom" title="In the News" />
               <Link
                 href="/press"
-                className="block rounded-xl border border-line bg-white p-5 transition hover:border-brand/40 hover:shadow-sm"
+                className="block rounded-xl border border-line bg-white p-5 text-center transition hover:border-brand/40 hover:shadow-sm"
               >
                 <p className="text-sm leading-relaxed text-muted">
                   How the College&apos;s milestones — Ethiopia&apos;s first kidney transplant, first

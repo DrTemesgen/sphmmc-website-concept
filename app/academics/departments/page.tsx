@@ -31,9 +31,9 @@ export default function DepartmentsIndexPage() {
               <Link
                 key={d.slug}
                 href={`/academics/departments/${d.slug}`}
-                className="group flex h-full flex-col rounded-xl border border-line bg-white p-5 transition hover:-translate-y-0.5 hover:border-brand/40 hover:shadow-md"
+                className="group flex h-full flex-col items-center rounded-xl border border-line bg-white p-5 text-center transition hover:-translate-y-0.5 hover:border-brand/40 hover:shadow-md"
               >
-                <div className="flex items-center justify-between gap-2">
+                <div className="flex flex-wrap items-center justify-center gap-2">
                   <span className="rounded-full bg-paper px-2.5 py-0.5 text-[11px] font-bold uppercase tracking-wide text-sky">
                     {typeLabel[d.type]}
                   </span>
@@ -57,7 +57,7 @@ export default function DepartmentsIndexPage() {
             title="Not sure which department you need?"
             intro="Use the Ask St. Paul's assistant (bottom-right) to describe what you need, or browse our specialty centres and the private wing."
           />
-          <div className="flex flex-wrap gap-3">
+          <div className="flex flex-wrap justify-center gap-3">
             <Link href="/centers" className="rounded-md border border-brand px-5 py-2.5 font-display font-bold text-brand transition hover:bg-brand hover:text-white">
               Specialty centres
             </Link>

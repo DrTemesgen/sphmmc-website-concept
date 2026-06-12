@@ -46,12 +46,12 @@ export default function AcademicsPage() {
                 height={300}
                 className="h-40 w-full object-cover"
               />
-              <div className="flex flex-1 flex-col p-6">
+              <div className="flex flex-1 flex-col items-center p-6 text-center">
                 <h2 className="font-display text-2xl font-bold text-navy group-hover:text-brand">{s.name}</h2>
                 <p className="mt-2 text-sm font-semibold text-sky">{s.tagline}</p>
                 <ul className="mt-4 space-y-1.5">
                   {s.highlights.slice(0, 3).map((h, i) => (
-                    <li key={i} className="flex gap-2 text-sm text-muted">
+                    <li key={i} className="flex justify-center gap-2 text-sm text-muted">
                       <span aria-hidden className="text-brand">•</span>
                       {h}
                     </li>
@@ -91,7 +91,7 @@ export default function AcademicsPage() {
       <section className="bg-paper py-14">
         <div className="mx-auto max-w-7xl px-4">
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-            <div className="rounded-xl border border-line bg-white p-6">
+            <div className="rounded-xl border border-line bg-white p-6 text-center">
               <h3 className="font-display text-lg font-bold text-navy">Programmes A–Z</h3>
               <p className="mt-2 text-sm leading-relaxed text-muted">
                 The full registrar catalogue — MD, 20 residencies, 30 fellowships, master&apos;s and
@@ -101,7 +101,7 @@ export default function AcademicsPage() {
                 Browse programmes →
               </Link>
             </div>
-            <div className="rounded-xl border border-line bg-white p-6">
+            <div className="rounded-xl border border-line bg-white p-6 text-center">
               <h3 className="font-display text-lg font-bold text-navy">Departments A–Z</h3>
               <p className="mt-2 text-sm leading-relaxed text-muted">
                 Explore all clinical and preclinical departments — each with its services,
@@ -111,7 +111,7 @@ export default function AcademicsPage() {
                 Browse departments →
               </Link>
             </div>
-            <div className="rounded-xl border border-line bg-white p-6">
+            <div className="rounded-xl border border-line bg-white p-6 text-center">
               <h3 className="font-display text-lg font-bold text-navy">Admissions & Registrar</h3>
               <p className="mt-2 text-sm leading-relaxed text-muted">
                 Applications, registration, transcripts and certification are handled by the
@@ -126,7 +126,7 @@ export default function AcademicsPage() {
                 Student portal ↗
               </a>
             </div>
-            <div className="rounded-xl border border-line bg-white p-6">
+            <div className="rounded-xl border border-line bg-white p-6 text-center">
               <h3 className="font-display text-lg font-bold text-navy">Professional Development</h3>
               <p className="mt-2 text-sm leading-relaxed text-muted">
                 The Centre for Professional &amp; Institutional Development (CPID) runs internal and

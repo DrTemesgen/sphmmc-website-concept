@@ -113,7 +113,7 @@ export default function InitiativesPage() {
           <div className="grid gap-5 sm:grid-cols-2">
             {pillars.map((p) => {
               const inner = (
-                <div className="flex h-full flex-col rounded-xl border border-line bg-white p-6 transition hover:border-brand/40 hover:shadow-md">
+                <div className="flex h-full flex-col items-center rounded-xl border border-line bg-white p-6 text-center transition hover:border-brand/40 hover:shadow-md">
                   <span className="text-xs font-bold uppercase tracking-wide text-sky">{p.tag}</span>
                   <h3 className="mt-1 font-display text-xl font-bold text-navy">{p.name}</h3>
                   <p className="mt-2 flex-1 text-sm leading-relaxed text-muted">{p.text}</p>
@@ -135,8 +135,8 @@ export default function InitiativesPage() {
         <SectionHeading eyebrow="How It Works" title="From Bedside to Market" />
         <div className="grid gap-5 md:grid-cols-4">
           {journey.map(([title, text], i) => (
-            <div key={title} className="relative rounded-xl border border-line p-5">
-              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-brand font-display text-lg font-bold text-white">
+            <div key={title} className="relative rounded-xl border border-line p-5 text-center">
+              <span className="mx-auto flex h-10 w-10 items-center justify-center rounded-full bg-brand font-display text-lg font-bold text-white">
                 {i + 1}
               </span>
               <h3 className="mt-3 font-display text-lg font-bold text-navy">{title}</h3>
@@ -204,14 +204,14 @@ export default function InitiativesPage() {
       <section className="border-t border-line bg-paper py-14">
         <div className="mx-auto max-w-7xl px-4">
           <div className="grid gap-5 md:grid-cols-3">
-            <div className="rounded-xl border border-line bg-white p-6">
+            <div className="rounded-xl border border-line bg-white p-6 text-center">
               <h3 className="font-display text-lg font-bold text-navy">Innovators & students</h3>
               <p className="mt-2 text-sm leading-relaxed text-muted">
                 Have an idea from the ward, lab or classroom? Bring it to the Hub and join the next
                 MedStart cohort.
               </p>
             </div>
-            <div className="rounded-xl border border-line bg-white p-6">
+            <div className="rounded-xl border border-line bg-white p-6 text-center">
               <h3 className="font-display text-lg font-bold text-navy">Partners & investors</h3>
               <p className="mt-2 text-sm leading-relaxed text-muted">
                 Co-develop, license a technology, or support a cohort. The Partnership &amp;
@@ -221,7 +221,7 @@ export default function InitiativesPage() {
                 Partnerships →
               </Link>
             </div>
-            <div className="rounded-xl border border-line bg-white p-6">
+            <div className="rounded-xl border border-line bg-white p-6 text-center">
               <h3 className="font-display text-lg font-bold text-navy">Get in touch</h3>
               <p className="mt-2 text-sm leading-relaxed text-muted">
                 Reach the Innovation &amp; Technology Transfer Directorate to discuss an idea,

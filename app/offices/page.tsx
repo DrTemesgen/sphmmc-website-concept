@@ -47,18 +47,18 @@ export default function OfficesPage() {
           if (groupOffices.length === 0) return null;
           return (
             <div key={group} className="mb-12 last:mb-0">
-              <h2 className="mb-2 border-b-2 border-brand/20 pb-2 font-display text-2xl font-bold text-navy">
+              <h2 className="mb-2 border-b-2 border-brand/20 pb-2 text-center font-display text-2xl font-bold text-navy">
                 {group}
               </h2>
               {GROUP_NOTES[group] && (
-                <p className="mb-5 text-sm leading-relaxed text-muted">{GROUP_NOTES[group]}</p>
+                <p className="mx-auto mb-5 max-w-3xl text-center text-sm leading-relaxed text-muted">{GROUP_NOTES[group]}</p>
               )}
               <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                 {groupOffices.map((o) => (
                   <Link
                     key={o.slug}
                     href={o.href ?? `/offices/${o.slug}`}
-                    className="group flex h-full flex-col rounded-lg border border-line p-5 transition hover:-translate-y-0.5 hover:border-brand/40 hover:shadow-sm"
+                    className="group flex h-full flex-col items-center rounded-lg border border-line p-5 text-center transition hover:-translate-y-0.5 hover:border-brand/40 hover:shadow-sm"
                   >
                     <h3 className="font-display text-base font-bold text-navy group-hover:text-brand">
                       {o.name}
@@ -73,7 +73,7 @@ export default function OfficesPage() {
             </div>
           );
         })}
-        <p className="text-sm text-muted">
+        <p className="text-center text-sm text-muted">
           See how these offices connect on the{" "}
           <Link href="/about/organogram" className="font-semibold text-brand hover:underline">
             2026 organogram

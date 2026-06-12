@@ -42,13 +42,13 @@ export default function LeadershipPage() {
         <SectionHeading eyebrow="Governance" title="How the College is Governed" />
         <div className="grid gap-5 lg:grid-cols-3">
           {governanceBodies.map((g) => (
-            <article key={g.id} id={g.id} className="rounded-xl border border-line p-6 scroll-mt-24">
+            <article key={g.id} id={g.id} className="rounded-xl border border-line p-6 text-center scroll-mt-24">
               <h2 className="font-display text-xl font-bold text-navy">{g.name}</h2>
               <p className="mt-3 text-sm leading-relaxed text-muted">{g.text}</p>
             </article>
           ))}
         </div>
-        <p className="mt-6 text-sm text-muted">
+        <p className="mt-6 text-center text-sm text-muted">
           See the full structure on the{" "}
           <Link href="/about/organogram" className="font-semibold text-brand hover:underline">
             2026 organogram

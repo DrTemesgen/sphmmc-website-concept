@@ -88,7 +88,7 @@ export default function LibraryPage() {
               href={r.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex h-full flex-col rounded-xl border border-line p-5 transition hover:-translate-y-0.5 hover:border-brand/40 hover:shadow-md"
+              className="group flex h-full flex-col items-center rounded-xl border border-line p-5 text-center transition hover:-translate-y-0.5 hover:border-brand/40 hover:shadow-md"
             >
               <h3 className="font-display text-base font-bold text-navy group-hover:text-brand">{r.name} ↗</h3>
               <p className="mt-2 flex-1 text-sm leading-relaxed text-muted">{r.text}</p>
@@ -103,13 +103,13 @@ export default function LibraryPage() {
           <SectionHeading eyebrow="Clinical Evidence" title="Subscribed Databases" />
           <div className="grid gap-5 md:grid-cols-2">
             {databases.map((d) => (
-              <div key={d.name} className="rounded-xl border border-line bg-white p-6">
+              <div key={d.name} className="rounded-xl border border-line bg-white p-6 text-center">
                 <h3 className="font-display text-lg font-bold text-navy">{d.name}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted">{d.text}</p>
               </div>
             ))}
           </div>
-          <p className="mt-4 text-xs text-muted">
+          <p className="mt-4 text-center text-xs text-muted">
             Access to subscribed databases is for registered staff and students; sign in through the
             library or campus network.
           </p>
@@ -123,14 +123,14 @@ export default function LibraryPage() {
             <SectionHeading eyebrow="What We Offer" title="Library Services" />
             <div className="grid gap-3 sm:grid-cols-2">
               {services.map((s) => (
-                <div key={s.name} className="rounded-lg border border-line p-4">
+                <div key={s.name} className="rounded-lg border border-line p-4 text-center">
                   <h3 className="font-display font-bold text-navy">{s.name}</h3>
                   <p className="mt-1 text-sm leading-relaxed text-muted">{s.text}</p>
                 </div>
               ))}
             </div>
 
-            <h2 className="mt-10 font-display text-xl font-bold text-navy">Library Rules</h2>
+            <h2 className="mt-10 text-center font-display text-xl font-bold text-navy">Library Rules</h2>
             <ul className="mt-3 space-y-1.5 text-sm text-ink">
               <li>• Maintain silence in reading areas; switch phones to silent.</li>
               <li>• Present a valid College ID to enter and to borrow.</li>

@@ -84,7 +84,7 @@ export default function ResearchPage() {
             <Link
               key={p.name}
               href={p.href}
-              className="group rounded-xl border border-line p-6 transition hover:-translate-y-0.5 hover:border-brand/40 hover:shadow-md"
+              className="group rounded-xl border border-line p-6 text-center transition hover:-translate-y-0.5 hover:border-brand/40 hover:shadow-md"
             >
               <h2 className="font-display text-xl font-bold text-navy group-hover:text-brand">{p.name}</h2>
               <p className="mt-2 text-sm leading-relaxed text-muted">{p.text}</p>
@@ -105,7 +105,7 @@ export default function ResearchPage() {
                   href={p.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group rounded-xl border border-line bg-white p-6 transition hover:shadow-md"
+                  className="group rounded-xl border border-line bg-white p-6 text-center transition hover:shadow-md"
                 >
                   <h2 className="font-display text-lg font-bold text-navy group-hover:text-brand">{p.name} ↗</h2>
                   <p className="mt-2 text-sm leading-relaxed text-muted">{p.text}</p>
@@ -114,7 +114,7 @@ export default function ResearchPage() {
                 <Link
                   key={p.name}
                   href={p.href}
-                  className="group rounded-xl border border-line bg-white p-6 transition hover:shadow-md"
+                  className="group rounded-xl border border-line bg-white p-6 text-center transition hover:shadow-md"
                 >
                   <h2 className="font-display text-lg font-bold text-navy group-hover:text-brand">{p.name}</h2>
                   <p className="mt-2 text-sm leading-relaxed text-muted">{p.text}</p>
@@ -123,9 +123,9 @@ export default function ResearchPage() {
             )}
           </div>
 
-          <div className="mt-10 rounded-xl bg-navy p-8 text-white">
+          <div className="mt-10 rounded-xl bg-navy p-8 text-center text-white">
             <h2 className="font-display text-2xl font-bold">Want to collaborate?</h2>
-            <p className="mt-2 max-w-2xl text-sm leading-relaxed text-white/80">
+            <p className="mx-auto mt-2 max-w-2xl text-sm leading-relaxed text-white/80">
               The Partnership &amp; Collaboration Directorate manages institutional research and
               training agreements with universities, health systems and industry — locally and
               internationally.

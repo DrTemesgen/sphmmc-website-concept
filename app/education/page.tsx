@@ -79,7 +79,7 @@ export default function EducationPage() {
       <section className="mx-auto max-w-7xl px-4 py-14">
         <div className="grid gap-5 md:grid-cols-2">
           {topics.map((t) => (
-            <article key={t.title} className="flex flex-col rounded-xl border border-line p-6">
+            <article key={t.title} className="flex flex-col items-center rounded-xl border border-line p-6 text-center">
               <h2 className="font-display text-xl font-bold text-navy">{t.title}</h2>
               <p className="mt-2 flex-1 text-sm leading-relaxed text-muted">{t.text}</p>
               <Link href={t.link.href} className="mt-4 text-sm font-bold text-brand hover:underline">
@@ -104,7 +104,7 @@ export default function EducationPage() {
               title="Health education on social media"
               intro="The Public Relations & Communication Executive runs regular public-health campaigns — follow us for updates."
             />
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-wrap justify-center gap-3">
               <a href={INSTITUTION.social.facebook} target="_blank" rel="noopener noreferrer" className="rounded-md bg-[#1877f2] px-4 py-2 text-sm font-bold text-white">
                 Facebook
               </a>

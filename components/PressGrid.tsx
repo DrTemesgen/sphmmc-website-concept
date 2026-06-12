@@ -44,9 +44,9 @@ export default function PressGrid() {
             href={item.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="group flex h-full flex-col rounded-xl border border-line bg-white p-5 transition hover:-translate-y-0.5 hover:border-brand/40 hover:shadow-md"
+            className="group flex h-full flex-col items-center rounded-xl border border-line bg-white p-5 text-center transition hover:-translate-y-0.5 hover:border-brand/40 hover:shadow-md"
           >
-            <div className="flex items-center justify-between gap-2">
+            <div className="flex flex-wrap items-center justify-center gap-2">
               <span className="font-display text-sm font-bold text-brand">{item.outlet}</span>
               <span className="text-xs text-muted">{item.date}</span>
             </div>
@@ -54,7 +54,7 @@ export default function PressGrid() {
               {item.headline}
             </h3>
             <p className="mt-2 flex-1 text-sm leading-relaxed text-muted">{item.summary}</p>
-            <div className="mt-3 flex flex-wrap gap-1.5">
+            <div className="mt-3 flex flex-wrap justify-center gap-1.5">
               {item.topics.map((t) => (
                 <span key={t} className="rounded-full bg-paper px-2 py-0.5 text-[11px] font-semibold text-sky">
                   {t}
@@ -65,7 +65,7 @@ export default function PressGrid() {
           </a>
         ))}
       </div>
-      <p className="mt-4 text-xs text-muted" role="status">
+      <p className="mt-4 text-center text-xs text-muted" role="status">
         Showing {items.length} of {PRESS_ITEMS.length} items.
       </p>
     </div>

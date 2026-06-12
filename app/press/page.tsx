@@ -49,7 +49,7 @@ export default function PressPage() {
         <div className="mx-auto max-w-7xl px-4">
           <SectionHeading light eyebrow="For Journalists" title="Media Resources" />
           <div className="grid gap-5 md:grid-cols-3">
-            <div className="rounded-xl border border-white/15 bg-white/5 p-6">
+            <div className="rounded-xl border border-white/15 bg-white/5 p-6 text-center">
               <h3 className="font-display text-lg font-bold text-gold">Press contact</h3>
               <p className="mt-2 text-sm leading-relaxed text-white/85">
                 Media enquiries and interview requests are handled by the Public Relations &amp;
@@ -65,7 +65,7 @@ export default function PressPage() {
                 </a>
               </p>
             </div>
-            <div className="rounded-xl border border-white/15 bg-white/5 p-6">
+            <div className="rounded-xl border border-white/15 bg-white/5 p-6 text-center">
               <h3 className="font-display text-lg font-bold text-gold">Facts &amp; figures</h3>
               <ul className="mt-2 space-y-1.5 text-sm text-white/85">
                 <li>• Founded 1968; medical college since 2007</li>
@@ -75,7 +75,7 @@ export default function PressPage() {
                 <li>• Ethiopia&apos;s first kidney transplant &amp; public IVF centre</li>
               </ul>
             </div>
-            <div className="rounded-xl border border-white/15 bg-white/5 p-6">
+            <div className="rounded-xl border border-white/15 bg-white/5 p-6 text-center">
               <h3 className="font-display text-lg font-bold text-gold">More from the College</h3>
               <ul className="mt-2 space-y-1.5 text-sm">
                 <li><Link href="/news" className="font-semibold text-sky hover:underline">Announcements →</Link></li>

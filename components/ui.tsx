@@ -26,7 +26,7 @@ export function PageHero({
 export function Breadcrumbs({ items }: { items: { label: string; href?: string }[] }) {
   return (
     <nav aria-label="Breadcrumb" className="border-b border-line bg-paper">
-      <ol className="mx-auto flex max-w-7xl flex-wrap items-center gap-1 px-4 py-2.5 text-xs text-muted sm:text-[13px]">
+      <ol className="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-1 px-4 py-2.5 text-xs text-muted sm:text-[13px]">
         <li>
           <Link href="/" className="hover:text-brand hover:underline">Home</Link>
         </li>
