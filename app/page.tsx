@@ -69,33 +69,33 @@ export default function HomePage() {
               "radial-gradient(circle at 80% 20%, #24ace2 0, transparent 45%), radial-gradient(circle at 15% 85%, #f6a821 0, transparent 35%)",
           }}
         />
-        <div className="relative mx-auto max-w-7xl px-4 pb-14 pt-16 sm:pb-20 sm:pt-24">
-          <p className="font-display text-sm font-bold uppercase tracking-[0.25em] text-gold">
+        <div className="relative mx-auto flex max-w-4xl flex-col items-center px-4 pb-14 pt-16 text-center sm:pb-20 sm:pt-24">
+          <p className="font-display text-xs font-bold uppercase tracking-[0.25em] text-gold sm:text-sm">
             Saint Paul&apos;s Hospital Millennium Medical College
           </p>
-          <h1 className="mt-3 max-w-4xl font-display text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">
+          <h1 className="mt-3 font-display text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">
             Our Speciality, <span className="text-sky">Your Well-Being</span>
           </h1>
           <p className="mt-5 max-w-2xl text-lg leading-relaxed text-white/85">
             Ethiopia&apos;s premier academic medical centre — a 700+ bed teaching hospital and
             medical college where world-class patient care, education and research meet.
           </p>
-          <div className="mt-8 flex flex-wrap gap-3">
+          <div className="mt-8 flex flex-wrap justify-center gap-3">
             <CTAButton href="/private-wing/book" variant="gold">Book an Appointment</CTAButton>
             <CTAButton href="/patient-care" variant="outline">Getting Care at St. Paul&apos;s</CTAButton>
           </div>
         </div>
 
         {/* Action cards */}
-        <div className="relative mx-auto max-w-7xl px-4 pb-12">
+        <div className="relative mx-auto max-w-6xl px-4 pb-12">
           <div className="grid gap-4 md:grid-cols-3">
             {actionCards.map((c) => (
               <Link
                 key={c.title}
                 href={c.href}
-                className="group rounded-xl border border-white/15 bg-white/10 p-6 backdrop-blur transition hover:bg-white hover:shadow-xl"
+                className="group flex flex-col items-center rounded-2xl border border-white/15 bg-white/10 p-7 text-center backdrop-blur transition hover:-translate-y-1 hover:bg-white hover:shadow-2xl"
               >
-                <span className="inline-flex rounded-lg bg-sky/20 p-3 text-sky transition group-hover:bg-brand/10 group-hover:text-brand">
+                <span className="inline-flex rounded-full bg-sky/20 p-4 text-sky transition group-hover:bg-brand/10 group-hover:text-brand">
                   {c.icon}
                 </span>
                 <h2 className="mt-4 font-display text-xl font-bold text-white transition group-hover:text-navy">
@@ -139,6 +139,7 @@ export default function HomePage() {
       {/* Tripartite mission */}
       <section className="mx-auto max-w-7xl px-4 py-16">
         <SectionHeading
+          center
           eyebrow="One College, One Mission"
           title="Care. Teach. Discover."
           intro="SPHMMC operates under a dual mandate as a teaching hospital and a higher education institution — every ward is a classroom, every patient benefits from the latest evidence."
@@ -185,6 +186,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl px-4">
           <SectionHeading
             light
+            center
             eyebrow="National Referral Programmes"
             title="Specialty Centres"
             intro="Our specialty centres lead the country in transplant medicine, fertility care and cardiac intervention."
@@ -194,7 +196,7 @@ export default function HomePage() {
               <Link
                 key={c.slug}
                 href={`/centers/${c.slug}`}
-                className="group rounded-xl border border-white/15 bg-white/5 p-6 transition hover:bg-white hover:shadow-xl"
+                className="group flex flex-col items-center rounded-2xl border border-white/15 bg-white/5 p-6 text-center transition hover:-translate-y-1 hover:bg-white hover:shadow-2xl"
               >
                 <h3 className="font-display text-xl font-bold text-sky transition group-hover:text-brand">{c.name}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-white/75 transition group-hover:text-muted">{c.tagline}</p>
@@ -215,6 +217,7 @@ export default function HomePage() {
       {/* Schools */}
       <section className="mx-auto max-w-7xl px-4 py-16">
         <SectionHeading
+          center
           eyebrow="The College"
           title="Four Schools, One Campus"
           intro="From the bedside to the community, our schools train the health workforce Ethiopia needs."
@@ -233,7 +236,7 @@ export default function HomePage() {
                 height={300}
                 className="h-36 w-full object-cover"
               />
-              <div className="flex flex-1 flex-col p-5">
+              <div className="flex flex-1 flex-col items-center p-5 text-center">
                 <h3 className="font-display text-lg font-bold text-navy group-hover:text-brand">{s.name}</h3>
                 <p className="mt-2 flex-1 text-sm leading-relaxed text-muted">{s.tagline}</p>
                 <p className="mt-3 text-sm font-bold text-brand">Visit the school →</p>

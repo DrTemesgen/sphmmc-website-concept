@@ -50,14 +50,16 @@ export function SectionHeading({
   title,
   intro,
   light = false,
+  center = false,
 }: {
   eyebrow?: string;
   title: string;
   intro?: string;
   light?: boolean;
+  center?: boolean;
 }) {
   return (
-    <div className="mb-8 max-w-3xl">
+    <div className={`mb-8 max-w-3xl ${center ? "mx-auto text-center" : ""}`}>
       {eyebrow && (
         <p className={`mb-1 font-display text-sm font-bold uppercase tracking-widest ${light ? "text-sky" : "text-brand"}`}>
           {eyebrow}
