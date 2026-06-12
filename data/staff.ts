@@ -88,6 +88,20 @@ export const STAFF: StaffMember[] = [
     interests: ["Interventional cardiology", "Echocardiography", "Rheumatic heart disease"],
     bio: "Sample profile. Cardiologist working with the Cardiac Catheterisation Laboratory, teaching residents and fellows and building Ethiopia's interventional-cardiology capacity.",
     email: "cardiology@sphmmc.edu.et",
+    publications: [
+      {
+        title: "Spectrum of valvular heart disease at a cardiac referral centre (sample)",
+        venue: "Ethiopian Heart Journal",
+        year: "2023",
+        url: "https://pubmed.ncbi.nlm.nih.gov/?term=valvular+heart+disease+ethiopia",
+      },
+      {
+        title: "Early outcomes of percutaneous coronary intervention in a low-resource setting (sample)",
+        venue: "BMC Cardiovascular Disorders",
+        year: "2022",
+        url: "https://pubmed.ncbi.nlm.nih.gov/?term=percutaneous+coronary+intervention+ethiopia",
+      },
+    ],
     status: "approved",
     sample: true,
   },
@@ -132,6 +146,20 @@ export const STAFF: StaffMember[] = [
     interests: ["Paediatric intensive care", "Procedural sedation", "Acute care training"],
     bio: "Sample profile. Paediatric emergency and critical-care physician supporting the paediatric ICU and acute-care training programmes.",
     email: "paed.picu@sphmmc.edu.et",
+    publications: [
+      {
+        title: "Establishing a paediatric intensive care unit in a tertiary hospital: a 3-year experience (sample)",
+        venue: "Journal of Tropical Pediatrics",
+        year: "2023",
+        url: "https://pubmed.ncbi.nlm.nih.gov/?term=paediatric+intensive+care+unit+ethiopia",
+      },
+      {
+        title: "Procedural sedation practice and safety in paediatric emergency care (sample)",
+        venue: "African Journal of Emergency Medicine",
+        year: "2021",
+        url: "https://pubmed.ncbi.nlm.nih.gov/?term=procedural+sedation+paediatric+emergency",
+      },
+    ],
     status: "approved",
     sample: true,
   },
@@ -178,6 +206,20 @@ export const STAFF: StaffMember[] = [
     interests: ["Hepatobiliary surgery", "Laparoscopic surgery", "Surgical education"],
     bio: "Sample profile. General and hepatobiliary surgeon leading the surgical teaching programme and expanding minimally invasive surgery.",
     email: "surgery@sphmmc.edu.et",
+    publications: [
+      {
+        title: "Outcomes of hepatobiliary surgery at a tertiary referral hospital (sample)",
+        venue: "World Journal of Surgery",
+        year: "2023",
+        url: "https://pubmed.ncbi.nlm.nih.gov/?term=hepatobiliary+surgery+ethiopia",
+      },
+      {
+        title: "Adoption of laparoscopic surgery in a resource-limited setting (sample)",
+        venue: "Surgical Endoscopy",
+        year: "2022",
+        url: "https://pubmed.ncbi.nlm.nih.gov/?term=laparoscopic+surgery+ethiopia",
+      },
+    ],
     status: "approved",
     sample: true,
   },
@@ -194,6 +236,20 @@ export const STAFF: StaffMember[] = [
     interests: ["Field epidemiology", "Health-systems research", "Maternal & child health"],
     bio: "Sample profile. Epidemiologist teaching on the MPH programmes and leading community-based research that informs national health policy.",
     email: "sph@sphmmc.edu.et",
+    publications: [
+      {
+        title: "Determinants of skilled birth attendance in rural Ethiopia (sample)",
+        venue: "PLOS ONE",
+        year: "2023",
+        url: "https://pubmed.ncbi.nlm.nih.gov/?term=skilled+birth+attendance+ethiopia",
+      },
+      {
+        title: "Health-systems readiness for non-communicable disease care: a facility survey (sample)",
+        venue: "BMC Health Services Research",
+        year: "2022",
+        url: "https://pubmed.ncbi.nlm.nih.gov/?term=health+system+readiness+NCD+ethiopia",
+      },
+    ],
     status: "approved",
     sample: true,
   },
@@ -210,10 +266,28 @@ export const STAFF: StaffMember[] = [
     interests: ["Critical-care nursing", "Clinical skills training", "Patient safety"],
     bio: "Sample profile. Critical-care nurse educator coordinating the MSc programme and clinical placements across the College's intensive-care units.",
     email: "nursing@sphmmc.edu.et",
+    publications: [
+      {
+        title: "Nurse-led early warning scoring and patient outcomes in critical care (sample)",
+        venue: "Intensive and Critical Care Nursing",
+        year: "2023",
+        url: "https://pubmed.ncbi.nlm.nih.gov/?term=nurse+early+warning+score+critical+care",
+      },
+      {
+        title: "Simulation-based training for critical-care nurses: an evaluation (sample)",
+        venue: "BMC Nursing",
+        year: "2021",
+        url: "https://pubmed.ncbi.nlm.nih.gov/?term=simulation+training+critical+care+nursing",
+      },
+    ],
     status: "approved",
     sample: true,
   },
 ];
+
+/** Resolve a profile photo — sample profiles fall back to an illustrated avatar. */
+export const staffPhoto = (s: StaffMember): string | undefined =>
+  s.photo ?? (s.sample ? `/images/staff/${s.slug}.png` : undefined);
 
 export const staffByDepartment = (deptSlug: string) =>
   STAFF.filter((s) => s.department === deptSlug && s.status === "approved");

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { StaffMember } from "@/data/staff";
+import { StaffMember, staffPhoto } from "@/data/staff";
 
 function initials(name: string) {
   const parts = name.replace(/^(Dr\.|Mr\.|Mrs\.|Ms\.|Sr\.|Prof\.)\s*/i, "").split(/\s+/);
@@ -8,16 +8,17 @@ function initials(name: string) {
 }
 
 export default function StaffCard({ staff }: { staff: StaffMember }) {
+  const photo = staffPhoto(staff);
   return (
     <article className="flex h-full flex-col rounded-xl border border-line bg-white p-5 transition hover:border-brand/40 hover:shadow-md">
       <div className="flex items-start gap-4">
-        {staff.photo ? (
+        {photo ? (
           <Image
-            src={staff.photo}
+            src={photo}
             alt={staff.name}
             width={64}
             height={64}
-            className="h-16 w-16 rounded-full border border-line object-cover object-top"
+            className="h-16 w-16 rounded-full border border-line bg-paper object-cover object-top"
           />
         ) : (
           <div aria-hidden className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-brand/10 font-display text-lg font-bold text-brand">

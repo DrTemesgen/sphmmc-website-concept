@@ -66,17 +66,17 @@ export default function LeadershipPage() {
           />
           <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {LEADERSHIP.map((l) => (
-              <article key={l.id} id={l.id} className="flex flex-col rounded-xl border border-line bg-white p-6 scroll-mt-24">
+              <article key={l.id} id={l.id} className="flex flex-col items-center rounded-xl border border-line bg-white p-6 text-center scroll-mt-24">
                 {l.photo ? (
                   <Image
                     src={l.photo}
                     alt={l.name}
-                    width={96}
-                    height={96}
-                    className="h-24 w-24 self-center rounded-full border border-line object-cover object-top"
+                    width={112}
+                    height={112}
+                    className="h-28 w-28 rounded-full border border-line object-cover object-top"
                   />
                 ) : (
-                  <div className="flex h-24 w-24 items-center justify-center self-center rounded-full bg-brand/10 font-display text-2xl font-bold text-brand" aria-hidden>
+                  <div className="flex h-28 w-28 items-center justify-center rounded-full bg-brand/10 font-display text-2xl font-bold text-brand" aria-hidden>
                     {l.name.startsWith("To be") ? "—" : l.name.split(" ").slice(-2).map((w) => w[0]).join("")}
                   </div>
                 )}

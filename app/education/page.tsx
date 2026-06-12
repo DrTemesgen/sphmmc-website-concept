@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { INSTITUTION } from "@/data/institution";
 import { PageHero, Breadcrumbs, SectionHeading } from "@/components/ui";
 
@@ -61,6 +62,19 @@ export default function EducationPage() {
         intro="Practical, trustworthy health information from the College's clinicians — because prevention is the best medicine."
       />
       <Breadcrumbs items={[{ label: "Health Education" }]} />
+
+      <section className="mx-auto max-w-7xl px-4 pt-10">
+        <div className="overflow-hidden rounded-2xl border border-line">
+          <Image
+            src="/images/community/ambassadors.jpg"
+            alt="SPHMMC community-health outreach"
+            width={1400}
+            height={420}
+            priority
+            className="h-48 w-full object-cover sm:h-60"
+          />
+        </div>
+      </section>
 
       <section className="mx-auto max-w-7xl px-4 py-14">
         <div className="grid gap-5 md:grid-cols-2">

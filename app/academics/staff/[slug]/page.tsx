@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { STAFF, staffBySlug } from "@/data/staff";
+import { STAFF, staffBySlug, staffPhoto } from "@/data/staff";
 import { departmentBySlug } from "@/data/departments";
 import { PageHero, Breadcrumbs } from "@/components/ui";
 import PublicationList from "@/components/PublicationList";
@@ -53,8 +53,8 @@ export default async function StaffProfilePage({
       <section className="mx-auto max-w-7xl px-4 py-14">
         <div className="grid gap-10 lg:grid-cols-3">
           <aside className="lg:col-span-1">
-            {staff.photo ? (
-              <Image src={staff.photo} alt={staff.name} width={320} height={360} className="w-full rounded-2xl border border-line object-cover" />
+            {staffPhoto(staff) ? (
+              <Image src={staffPhoto(staff)!} alt={staff.name} width={320} height={360} className="w-full rounded-2xl border border-line bg-paper object-cover" />
             ) : (
               <div aria-hidden className="flex aspect-[4/5] w-full items-center justify-center rounded-2xl bg-brand/10 font-display text-6xl font-bold text-brand">
                 {initials(staff.name)}

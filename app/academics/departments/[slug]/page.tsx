@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
-import { DEPARTMENTS, departmentBySlug } from "@/data/departments";
+import { DEPARTMENTS, departmentBySlug, Department } from "@/data/departments";
 import { schoolBySlug } from "@/data/schools";
 import { DOCTORS } from "@/data/doctors";
 import { staffByDepartment } from "@/data/staff";
@@ -10,6 +11,23 @@ import StaffCard from "@/components/StaffCard";
 
 export function generateStaticParams() {
   return DEPARTMENTS.map((d) => ({ slug: d.slug }));
+}
+
+// Banner image by department type, so every department page has imagery.
+function deptBanner(dept: Department): { src: string; alt: string } {
+  const byType: Record<string, { src: string; alt: string }> = {
+    clinical: { src: "/images/clinical/icu.jpg", alt: "Clinical care at St. Paul's" },
+    preclinical: { src: "/images/clinical/lab-analyzer.jpg", alt: "Laboratory science at St. Paul's" },
+    academic: { src: "/images/community/students.png", alt: "SPHMMC students on campus" },
+  };
+  // A few department-specific overrides for stronger relevance
+  const overrides: Record<string, { src: string; alt: string }> = {
+    pathology: { src: "/images/clinical/lab-amr.jpg", alt: "Pathology laboratory work" },
+    microbiology: { src: "/images/lab/all-labs.png", alt: "Microbiology laboratory" },
+    radiology: { src: "/images/clinical/lab-analyzer.jpg", alt: "Diagnostic imaging equipment" },
+    "internal-medicine": { src: "/images/campus/cardiovascular.png", alt: "The Cardiovascular Center" },
+  };
+  return overrides[dept.slug] ?? byType[dept.type] ?? byType.clinical;
 }
 
 export async function generateMetadata({
@@ -47,6 +65,19 @@ export default async function DepartmentPage({
           { label: dept.name },
         ]}
       />
+
+      <section className="mx-auto max-w-7xl px-4 pt-10">
+        <div className="overflow-hidden rounded-2xl border border-line">
+          <Image
+            src={deptBanner(dept).src}
+            alt={deptBanner(dept).alt}
+            width={1400}
+            height={420}
+            priority
+            className="h-48 w-full object-cover sm:h-60"
+          />
+        </div>
+      </section>
 
       <section className="mx-auto max-w-7xl px-4 py-14">
         <div className="grid gap-10 lg:grid-cols-3">
