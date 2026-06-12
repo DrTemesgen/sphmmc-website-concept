@@ -24,11 +24,12 @@ export default function PatientCarePage() {
       <section className="mx-auto max-w-7xl px-4 pt-10">
         <div className="overflow-hidden rounded-2xl border border-line">
           <Image
-            src="/images/clinical/icu.jpg"
-            alt="A modern patient-care room at St. Paul's"
+            src="/images/campus/cardiovascular.png"
+            alt="The Cardiovascular Center at St. Paul's"
             width={1400}
             height={460}
             priority
+            quality={90}
             className="h-52 w-full object-cover sm:h-64"
           />
         </div>

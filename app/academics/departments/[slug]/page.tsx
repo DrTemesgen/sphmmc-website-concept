@@ -16,9 +16,9 @@ export function generateStaticParams() {
 // Banner image by department type, so every department page has imagery.
 function deptBanner(dept: Department): { src: string; alt: string } {
   const byType: Record<string, { src: string; alt: string }> = {
-    clinical: { src: "/images/clinical/icu.jpg", alt: "Clinical care at St. Paul's" },
+    clinical: { src: "/images/campus/cardiovascular.png", alt: "Clinical facilities at St. Paul's" },
     preclinical: { src: "/images/clinical/lab-analyzer.jpg", alt: "Laboratory science at St. Paul's" },
-    academic: { src: "/images/community/students.png", alt: "SPHMMC students on campus" },
+    academic: { src: "/images/community/ambassadors.jpg", alt: "SPHMMC students and graduates" },
   };
   // A few department-specific overrides for stronger relevance
   const overrides: Record<string, { src: string; alt: string }> = {

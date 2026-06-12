@@ -14,7 +14,7 @@ export interface School {
 
 /** Banner image per school */
 export const SCHOOL_IMAGES: Record<SchoolSlug, { src: string; alt: string }> = {
-  medicine: { src: "/images/campus/entrance-group.jpg", alt: "Students and staff at the St. Paul's main entrance" },
+  medicine: { src: "/images/campus/entrance-hires.jpg", alt: "Medical students at the St. Paul's campus" },
   "nursing-midwifery": { src: "/images/community/students.png", alt: "SPHMMC students in white coats on campus" },
   "public-health": { src: "/images/community/ambassadors.jpg", alt: "SPHMMC community-health ambassadors" },
   pharmacy: { src: "/images/clinical/lab-analyzer.jpg", alt: "Laboratory analyser at SPHMMC" },

@@ -29,7 +29,7 @@ export const CENTERS: Center[] = [
       "Transplant Research & Data Management Team",
     ],
     trainingRole: "Training site for nephrology, urology and transplant-surgery fellowship programmes.",
-    image: { src: "/images/clinical/icu.jpg", alt: "A modern intensive-care room at St. Paul's" },
+    image: { src: "/images/lab/all-labs.png", alt: "Transplant immunology and laboratory facilities" },
   },
   {
     slug: "infertility",
