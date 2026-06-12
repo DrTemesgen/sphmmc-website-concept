@@ -101,10 +101,10 @@ export default function ExaminationCentrePage() {
       <section className="mx-auto max-w-7xl px-4 pt-10">
         <div className="overflow-hidden rounded-2xl border border-line">
           <Image
-            src="/images/clinical/lab-analyzer.jpg"
-            alt="Technology-enabled assessment facilities at SPHMMC"
-            width={1400}
-            height={460}
+            src="/images/clinical/skills-training.jpg"
+            alt="Clinicians practising neonatal airway skills on a manikin — hands-on clinical assessment at SPHMMC"
+            width={1600}
+            height={1063}
             priority
             quality={90}
             className="h-52 w-full object-cover sm:h-64"

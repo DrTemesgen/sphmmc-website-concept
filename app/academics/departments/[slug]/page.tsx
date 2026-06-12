@@ -26,6 +26,11 @@ function deptBanner(dept: Department): { src: string; alt: string } {
     microbiology: { src: "/images/lab/all-labs.png", alt: "Microbiology laboratory" },
     radiology: { src: "/images/clinical/lab-analyzer.jpg", alt: "Diagnostic imaging equipment" },
     "internal-medicine": { src: "/images/campus/cardiovascular.png", alt: "The Cardiovascular Center" },
+    pharmacy: { src: "/images/clinical/pharmacy-team.jpg", alt: "SPHMMC pharmacy team in white coats at the College" },
+    pharmacology: { src: "/images/clinical/pharmacy-team.jpg", alt: "SPHMMC pharmacy team in white coats at the College" },
+    nursing: { src: "/images/clinical/nurse-nicu.jpg", alt: "An SPHMMC nurse caring for a newborn" },
+    midwifery: { src: "/images/clinical/nurse-nicu.jpg", alt: "An SPHMMC nurse caring for a newborn" },
+    paediatrics: { src: "/images/clinical/skills-training.jpg", alt: "Neonatal skills training at SPHMMC" },
   };
   return overrides[dept.slug] ?? byType[dept.type] ?? byType.clinical;
 }
