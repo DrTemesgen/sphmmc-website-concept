@@ -242,16 +242,16 @@ export const ORG_UNITS: OrgUnit[] = [
     reportsTo: "cd-research",
     tier: "L2-Dir",
     note: "Houses the Institutional Research and Ethics Review Committee (IRERC).",
-    href: "/research/research-affairs",
+    href: "/offices/research-affairs",
   },
-  { id: "community-service", name: "Community Service Directorate", reportsTo: "cd-research", tier: "L2-Dir", href: "/research/community-service" },
+  { id: "community-service", name: "Community Service Directorate", reportsTo: "cd-research", tier: "L2-Dir", href: "/offices/community-service" },
   {
     id: "partnership",
     name: "Partnership & Collaboration Directorate",
     reportsTo: "cd-research",
     tier: "L2-Dir",
     note: "Carries the consultancy function (75–90% staff income-share rule).",
-    href: "/research/partnership-collaboration",
+    href: "/offices/partnership-collaboration",
   },
 
   // ── Corporate Directorate 4: Quality & Innovation ──────────────────────
