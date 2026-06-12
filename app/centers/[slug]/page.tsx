@@ -52,7 +52,7 @@ export default async function CenterPage({
               </div>
             )}
             <div>
-              <SectionHeading eyebrow="Overview" title={`About the ${center.name}`} />
+              <SectionHeading center={false} eyebrow="Overview" title={`About the ${center.name}`} />
               <p className="leading-relaxed text-ink">{center.overview}</p>
             </div>
             {center.teams.length > 0 && (

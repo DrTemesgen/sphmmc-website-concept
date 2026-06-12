@@ -75,7 +75,7 @@ export default function InitiativesPage() {
       <section className="mx-auto max-w-7xl px-4 py-14">
         <div className="grid items-center gap-10 lg:grid-cols-2">
           <div>
-            <SectionHeading eyebrow="Why a Hub" title="Innovation built into the mission" />
+            <SectionHeading center={false} eyebrow="Why a Hub" title="Innovation built into the mission" />
             <div className="space-y-4 leading-relaxed text-ink">
               <p>
                 St. Paul&apos;s sees around 1,200 patients a day across every specialty. That scale is
@@ -156,7 +156,7 @@ export default function InitiativesPage() {
               <Image src="/images/lab/blood-culture.png" alt="Automated blood-culture system" width={500} height={400} className="col-span-2 rounded-xl border border-white/10 bg-white object-cover" />
             </div>
             <div className="order-1 lg:order-2">
-              <SectionHeading light eyebrow="Research Engine" title="The IDREAM Molecular Lab" />
+              <SectionHeading light center={false} eyebrow="Research Engine" title="The IDREAM Molecular Lab" />
               <p className="leading-relaxed text-white/85">
                 Established in December 2022 for pandemic preparedness — with support from the Bavarian
                 State Ministry of Science &amp; Art and GIZ via LMU Klinikum Munich — IDREAM is a

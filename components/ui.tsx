@@ -12,7 +12,7 @@ export function PageHero({
 }) {
   return (
     <div className="bg-gradient-to-br from-navy via-navy to-brand text-white">
-      <div className="mx-auto max-w-7xl px-4 py-12 sm:py-16">
+      <div className="mx-auto flex max-w-7xl flex-col items-center px-4 py-12 text-center sm:py-16">
         {eyebrow && (
           <p className="mb-2 font-display text-sm font-bold uppercase tracking-widest text-sky">{eyebrow}</p>
         )}
@@ -50,12 +50,13 @@ export function SectionHeading({
   title,
   intro,
   light = false,
-  center = false,
+  center = true,
 }: {
   eyebrow?: string;
   title: string;
   intro?: string;
   light?: boolean;
+  /** Centered by default site-wide; pass center={false} for left-aligned contexts. */
   center?: boolean;
 }) {
   return (

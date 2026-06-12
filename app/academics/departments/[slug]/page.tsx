@@ -83,7 +83,7 @@ export default async function DepartmentPage({
         <div className="grid gap-10 lg:grid-cols-3">
           <div className="space-y-10 lg:col-span-2">
             <div>
-              <SectionHeading eyebrow="Overview" title={`About ${dept.name}`} />
+              <SectionHeading center={false} eyebrow="Overview" title={`About ${dept.name}`} />
               <p className="leading-relaxed text-ink">{dept.overview}</p>
             </div>
 

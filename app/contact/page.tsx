@@ -31,7 +31,7 @@ export default function ContactPage() {
             </div>
 
             <div className="rounded-xl border border-line p-6">
-              <SectionHeading eyebrow="Reach Us" title="Contact Details" />
+              <SectionHeading center={false} eyebrow="Reach Us" title="Contact Details" />
               <dl className="space-y-4 text-sm">
                 <div>
                   <dt className="font-bold text-navy">Address</dt>

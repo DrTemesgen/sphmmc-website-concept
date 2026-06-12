@@ -57,7 +57,7 @@ export default async function SchoolPage({
       <section className="mx-auto max-w-7xl px-4 py-14">
         <div className="grid gap-10 lg:grid-cols-3">
           <div className="lg:col-span-2">
-            <SectionHeading eyebrow="Overview" title={`About the ${school.name}`} />
+            <SectionHeading center={false} eyebrow="Overview" title={`About the ${school.name}`} />
             <p className="leading-relaxed text-ink">{school.overview}</p>
 
             {clinical.length > 0 && (

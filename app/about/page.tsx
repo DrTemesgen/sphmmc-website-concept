@@ -30,7 +30,7 @@ export default function AboutPage() {
       <section className="mx-auto max-w-7xl px-4 py-14">
         <div className="grid gap-10 lg:grid-cols-3">
           <div className="lg:col-span-2">
-            <SectionHeading eyebrow="At a Glance" title="St. Paul's Hospital Millennium Medical College" />
+            <SectionHeading center={false} eyebrow="At a Glance" title="St. Paul's Hospital Millennium Medical College" />
             <div className="space-y-4 leading-relaxed text-ink">
               <p>{HISTORY.founding}</p>
               <p>{HISTORY.millennium}</p>
