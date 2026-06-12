@@ -16,9 +16,15 @@ const WELCOME: ChatTurn = {
 
 const QUICK_PROMPTS = [
   "How do I book an appointment?",
+  "Find a doctor by specialty",
   "Which department treats kidney problems?",
-  "What are the visiting arrangements?",
-  "Tell me about the medical school",
+  "Tell me about the specialty centres",
+  "How does the referral process work?",
+  "What does a private consultation cost?",
+  "What programmes do you offer?",
+  "How do I apply / admissions?",
+  "Where are you located?",
+  "What are the visiting hours?",
 ];
 
 /** Render assistant text, turning internal paths into links. */
@@ -161,6 +167,9 @@ export default function AIAssistant() {
             )}
             {messages.length === 1 && (
               <div className="space-y-2 pt-1">
+                <p className="px-1 text-[11px] font-bold uppercase tracking-wide text-muted">
+                  Suggested questions
+                </p>
                 {QUICK_PROMPTS.map((q) => (
                   <button
                     key={q}

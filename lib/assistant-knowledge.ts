@@ -82,20 +82,47 @@ export function fallbackAnswer(message: string): string {
   if (emergency.test(m)) {
     return `🚨 If this is an emergency, please call ${INSTITUTION.contact.shortCode} now or come directly to our emergency department — it is open 24/7 and no referral is needed.`;
   }
-  if (/(book|appointment|reserve|ቀጠሮ)/.test(m)) {
-    return `You can book a private-wing consultant online in a few steps: go to /private-wing/book, choose a specialty or doctor, pick an available time, and enter your name and phone number. You can also call ${INSTITUTION.contact.phone}.`;
+  if (/(referr|refer me|how.*refer|referral)/.test(m)) {
+    return `St. Paul's is a national referral hospital. With a referral letter from your health centre or hospital, bring it (with your ID and previous records) to outpatient registration; the Patients Referral & Flow Directorate schedules you into the right clinic. Details at /patient-care/referrals. Prefer not to wait? Book a private consultation at /private-wing/book.`;
   }
-  if (/(doctor|specialist|consultant|ሐኪም)/.test(m)) {
-    return `You can browse our private-wing consultants by specialty at /private-wing/doctors. Each profile shows the doctor's specialty, clinic days and consultation fee, with a "Book" button.`;
+  if (/(book|appointment|reserve|schedule|ቀጠሮ)/.test(m)) {
+    return `You can book a private-wing consultant online in four steps: go to /private-wing/book, choose a specialty or doctor, pick an available time, and enter your name and phone number — you'll get an instant confirmation. You can also call ${INSTITUTION.contact.phone}.`;
   }
-  if (/(department|clinic|service)/.test(m)) {
-    return `All our clinical departments are listed A–Z at /academics/departments — from Internal Medicine and Paediatrics to Surgery, Obstetrics & Gynaecology and more. Specialty centres (kidney transplant, fertility, cardiac cath lab) are at /centers.`;
+  if (/(fee|cost|price|how much|payment|pay|ክፍያ)/.test(m)) {
+    return `Private-wing consultation fees vary by consultant (about 800–1,200 ETB) and are shown on each doctor's profile at /private-wing/doctors. Investigations and procedures are charged separately. Emergency and referral outpatient services follow the hospital's standard arrangements.`;
   }
-  if (/(school|study|admission|student|college|ትምህርት)/.test(m)) {
-    return `SPHMMC has four schools — Medicine, Nursing & Midwifery, Public Health, and Pharmacy. See /academics for programmes, or the student portal at portal.sphmmc.edu.et for admissions and registration.`;
+  if (/(doctor|specialist|consultant|find a|ሐኪም)/.test(m)) {
+    return `You can browse our private-wing consultants by specialty, language and clinic day at /private-wing/doctors. Each profile shows the doctor's focus areas, clinic days and consultation fee, with a "Book" button.`;
   }
-  if (/(contact|phone|address|location|where|አድራሻ)/.test(m)) {
-    return `We are located in ${INSTITUTION.contact.address} (${INSTITUTION.contact.poBox}). Phone: ${INSTITUTION.contact.phone}, hotline ${INSTITUTION.contact.shortCode}, email ${INSTITUTION.contact.email}. See /contact for a map.`;
+  if (/(transplant|kidney|fertility|ivf|infertilit|cardiac|cath|heart centre|heart center|centre|center)/.test(m)) {
+    return `Our specialty centres are at /centers — the Renal Transplant Centre (Ethiopia's first kidney transplant programme), the Infertility Centre (reproductive medicine and IVF), and the Cardiac Catheterisation Laboratory (interventional cardiology). Access is usually by referral via /patient-care/referrals.`;
   }
-  return `I can help you find a department (/academics/departments), book a private-wing consultant (/private-wing/book), or learn about the College (/about). For anything urgent, call ${INSTITUTION.contact.shortCode}. How can I help?`;
+  if (/(department|clinic|service|treat|condition)/.test(m)) {
+    return `All our clinical and academic departments are listed A–Z at /academics/departments — Internal Medicine, Paediatrics, Surgery, Obstetrics & Gynaecology, Orthopaedics, Neurology and many more. Tell me your concern and I can point you to the right one.`;
+  }
+  if (/(programme|program|course|residency|fellowship|masters|mph|phd|degree)/.test(m)) {
+    return `The College offers 75+ programmes — the MD, 20 specialty residencies, 30 subspecialty fellowships, and master's/PhD programmes. Browse and search them all at /academics/programs.`;
+  }
+  if (/(apply|admission|enrol|enroll|register|entrance|how to join|student|study|ትምህርት)/.test(m)) {
+    return `SPHMMC has four schools — Medicine, Nursing & Midwifery, Public Health, and Pharmacy (/academics). Admissions, entrance exams and registration run through the student portal at portal.sphmmc.edu.et; programme calls are announced at /news. Staff can submit a profile at /academics/staff/submit.`;
+  }
+  if (/(library|book a journal|e-?journal|database|repository|uptodate|hinari)/.test(m)) {
+    return `The Library offers e-journals, the UpToDate and HINARI databases, an institutional repository and digital library — plus scanning, printing and inter-library loan. See /library.`;
+  }
+  if (/(research|innovat|startup|idream|publication|journal)/.test(m)) {
+    return `Research is coordinated by the Research Affairs Directorate (with the IRERC ethics committee) — see /research. The College also runs the Millennium Health Innovation Hub (MedStart accelerator + IDREAM molecular lab) at /initiatives, and publishes the Millennium Journal of Health.`;
+  }
+  if (/(news|press|media|in the news|coverage|announcement)/.test(m)) {
+    return `Announcements are at /news, and press coverage of the College — first-in-Ethiopia transplant, IVF and microsurgery milestones — is at /press.`;
+  }
+  if (/(visit|hour|opening|open|when.*open|visiting)/.test(m)) {
+    return `Our emergency department is open 24/7. Specialty outpatient clinics run during the day (by referral), and private-wing clinics run in the evenings and weekends — see each consultant's clinic days at /private-wing/doctors. For other visiting arrangements, please call ${INSTITUTION.contact.phone}.`;
+  }
+  if (/(contact|phone|address|location|where|direction|map|email|social|facebook|አድራሻ)/.test(m)) {
+    return `We are located in ${INSTITUTION.contact.address} (${INSTITUTION.contact.poBox}). Phone: ${INSTITUTION.contact.phone}, hotline ${INSTITUTION.contact.shortCode}, email ${INSTITUTION.contact.email}. A map and our social links are at /contact.`;
+  }
+  if (/(about|history|mission|vision|leader|provost|govern|organog)/.test(m)) {
+    return `St. Paul's was founded in 1968 and became a medical college in 2007. Learn about its history, mission and values at /about, the leadership at /about/leadership, and the full organisational structure at /about/organogram.`;
+  }
+  return `I can help you book a private-wing consultant (/private-wing/book), find a doctor (/private-wing/doctors), explore departments (/academics/departments) and programmes (/academics/programs), or learn about the College (/about). For anything urgent, call ${INSTITUTION.contact.shortCode}. What do you need?`;
 }
