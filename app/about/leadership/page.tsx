@@ -110,9 +110,9 @@ export default function LeadershipPage() {
             title="The Provost & Corporate Directors"
             intro="Four Corporate Directorates — each led by a Vice Provost/Corporate Director — carry the College's mandate."
           />
-          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+          <div className="flex flex-wrap justify-center gap-5">
             {LEADERSHIP.map((l) => (
-              <article key={l.id} id={l.id} className="flex flex-col items-center rounded-xl border border-line bg-white p-6 text-center scroll-mt-24">
+              <article key={l.id} id={l.id} className="flex w-full flex-col items-center rounded-xl border border-line bg-white p-6 text-center scroll-mt-24 sm:w-[calc(50%-0.625rem)] lg:w-[calc(33.333%-0.834rem)]">
                 {l.photo ? (
                   <Image
                     src={l.photo}
