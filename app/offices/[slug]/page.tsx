@@ -5,7 +5,8 @@ import { OFFICES, officeBySlug } from "@/data/offices";
 import { PageHero, Breadcrumbs } from "@/components/ui";
 
 export function generateStaticParams() {
-  return OFFICES.map((o) => ({ slug: o.slug }));
+  // partnership-collaboration has its own dedicated, restructured page.
+  return OFFICES.filter((o) => o.slug !== "partnership-collaboration").map((o) => ({ slug: o.slug }));
 }
 
 export async function generateMetadata({
