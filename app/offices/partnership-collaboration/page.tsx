@@ -1,12 +1,47 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { PageHero, Breadcrumbs, SectionHeading } from "@/components/ui";
 import {
   PARTNERSHIP_INTRO,
   PARTNERSHIP_MANDATE,
   COLLABORATION_TYPES,
   PARTNER_GROUPS,
+  type Partner,
 } from "@/data/partners";
+
+/** Small logo (or initials monogram fallback) shown atop each partner card. */
+function PartnerBadge({ partner }: { partner: Partner }) {
+  if (partner.logo) {
+    return (
+      <span className="flex h-12 w-12 items-center justify-center overflow-hidden rounded-xl border border-line bg-white p-1.5 shadow-sm">
+        <Image
+          src={partner.logo}
+          alt={`${partner.name} logo`}
+          width={40}
+          height={40}
+          className="h-full w-full object-contain"
+        />
+      </span>
+    );
+  }
+  const initials = partner.name
+    .replace(/\(.*?\)/g, "")
+    .split(/[\s—&]+/)
+    .filter(Boolean)
+    .slice(0, 2)
+    .map((w) => w[0])
+    .join("")
+    .toUpperCase();
+  return (
+    <span
+      aria-hidden
+      className="flex h-12 w-12 items-center justify-center rounded-xl bg-brand/10 font-display text-base font-bold text-brand"
+    >
+      {initials}
+    </span>
+  );
+}
 
 export const metadata: Metadata = {
   title: "Partnership & Collaboration",
@@ -106,7 +141,8 @@ export default function PartnershipPage() {
                 {group.partners.map((p) => {
                   const inner = (
                     <>
-                      <h4 className="font-display text-base font-bold text-navy group-hover:text-brand">
+                      <PartnerBadge partner={p} />
+                      <h4 className="mt-3 font-display text-base font-bold text-navy group-hover:text-brand">
                         {p.name}
                       </h4>
                       <p className="mt-2 text-sm leading-relaxed text-muted">{p.domain}</p>
@@ -119,14 +155,14 @@ export default function PartnershipPage() {
                       href={p.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="group flex h-full flex-col rounded-xl border border-line bg-white p-5 transition hover:-translate-y-0.5 hover:border-brand/40 hover:shadow-md"
+                      className="group flex h-full flex-col items-center rounded-xl border border-line bg-white p-5 text-center transition hover:-translate-y-0.5 hover:border-brand/40 hover:shadow-md"
                     >
                       {inner}
                     </a>
                   ) : (
                     <div
                       key={p.name}
-                      className="group flex h-full flex-col rounded-xl border border-line bg-white p-5 transition hover:border-brand/40 hover:shadow-sm"
+                      className="group flex h-full flex-col items-center rounded-xl border border-line bg-white p-5 text-center transition hover:border-brand/40 hover:shadow-sm"
                     >
                       {inner}
                     </div>
