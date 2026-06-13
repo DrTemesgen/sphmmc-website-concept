@@ -53,6 +53,7 @@ export default function AboutPage() {
             <div className="rounded-xl border border-line p-5">
               <h3 className="font-display text-lg font-bold text-navy">Explore</h3>
               <ul className="mt-3 space-y-2 text-sm">
+                <li><Link href="/about/leadership#provost-message" className="font-semibold text-brand hover:underline">Message from the Provost →</Link></li>
                 <li><Link href="/about/leadership" className="font-semibold text-brand hover:underline">Leadership & governance →</Link></li>
                 <li><Link href="/about/organogram" className="font-semibold text-brand hover:underline">Organisational structure (2026) →</Link></li>
                 <li><Link href="/offices" className="font-semibold text-brand hover:underline">Offices & directorates →</Link></li>

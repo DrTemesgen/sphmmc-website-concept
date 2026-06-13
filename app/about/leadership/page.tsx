@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { LEADERSHIP } from "@/data/institution";
+import { LEADERSHIP, PROVOST_MESSAGE } from "@/data/institution";
 import { PageHero, Breadcrumbs, SectionHeading } from "@/components/ui";
 
 export const metadata: Metadata = {
@@ -38,7 +38,53 @@ export default function LeadershipPage() {
       />
       <Breadcrumbs items={[{ label: "About", href: "/about" }, { label: "Leadership" }]} />
 
-      <section className="mx-auto max-w-7xl px-4 py-14">
+      {/* Message from the Provost */}
+      <section id="provost-message" className="mx-auto max-w-7xl px-4 py-14 scroll-mt-24">
+        <SectionHeading eyebrow="A Word of Welcome" title="Message from the Provost" />
+        <div className="grid items-start gap-8 lg:grid-cols-3">
+          {/* Portrait + identity */}
+          <div className="lg:col-span-1">
+            <div className="overflow-hidden rounded-2xl border border-line bg-paper">
+              <Image
+                src={PROVOST_MESSAGE.photo}
+                alt={PROVOST_MESSAGE.name}
+                width={480}
+                height={520}
+                className="h-72 w-full object-cover object-top sm:h-80"
+              />
+              <div className="p-5 text-center">
+                <p className="font-display text-lg font-bold text-navy">{PROVOST_MESSAGE.name}</p>
+                <p className="mt-1 text-sm font-semibold text-brand">{PROVOST_MESSAGE.title}</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Message */}
+          <div className="lg:col-span-2">
+            <blockquote className="border-l-4 border-gold pl-5">
+              <p className="font-display text-xl font-bold leading-snug text-navy sm:text-2xl">
+                &ldquo;{PROVOST_MESSAGE.pullQuote}&rdquo;
+              </p>
+            </blockquote>
+            <div className="mt-6 space-y-4 leading-relaxed text-ink">
+              {PROVOST_MESSAGE.paragraphs.map((p, i) => (
+                <p key={i}>{p}</p>
+              ))}
+            </div>
+            <div className="mt-6 border-t border-line pt-4">
+              <p className="font-display text-base font-bold text-navy">{PROVOST_MESSAGE.name}</p>
+              <p className="text-sm text-muted">{PROVOST_MESSAGE.title}</p>
+            </div>
+            <p className="mt-4 rounded-md bg-paper p-3 text-xs leading-relaxed text-muted">
+              Illustrative welcome message for this concept site, written in keeping with the
+              College&apos;s mission and the Provost&apos;s stated priorities. To be confirmed by the
+              Public Relations &amp; Communication Executive before any official use.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-t border-line mx-auto max-w-7xl px-4 py-14">
         <SectionHeading eyebrow="Governance" title="How the College is Governed" />
         <div className="grid gap-5 lg:grid-cols-3">
           {governanceBodies.map((g) => (

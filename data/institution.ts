@@ -93,6 +93,29 @@ export const HISTORY = {
  * Names verified from sphmmc.edu.et leader pages (June 2026) — confirm with the
  * Public Relations & Communication Executive before go-live.
  */
+/**
+ * Provost's welcome message. The legacy site carries no published message, so
+ * this is an illustrative welcome written in the Provost's voice — grounded in
+ * the College's real mission, the 2026 structure, and his stated public
+ * priorities (partnerships, quality of care, workforce development and
+ * skill-based training). To be confirmed by the Public Relations &
+ * Communication Executive before any real use.
+ */
+export const PROVOST_MESSAGE = {
+  name: "Dr. Muluken Tesfaye",
+  title: "Provost & Chief Executive Director",
+  photo: "/images/leaders/provost.png",
+  greeting: "Welcome to St. Paul's",
+  pullQuote:
+    "We exist to heal and to teach — and to do both with excellence, integrity and compassion.",
+  paragraphs: [
+    "It is my honour to welcome you to St. Paul's Hospital Millennium Medical College. From a charitable hospital founded in 1968 to one of Ethiopia's premier academic medical centres, St. Paul's has always carried a dual mandate: to heal and to teach. Every day our wards, classrooms and laboratories serve around 1,200 patients while training the physicians, nurses, midwives, public-health specialists and pharmacists our nation needs.",
+    "Our people are our greatest strength. We are investing in their competency through modern, skill-based training — from advanced nursing skills laboratories to simulation and structured assessment — so that every graduate leaves us ready to deliver safe, compassionate, high-quality care. Quality is not a department here; it is a habit we build into every ward round, every lecture and every research protocol.",
+    "We believe a teaching hospital should also be an engine of discovery. Through problem-solving research of public-health significance, the Millennium Health Innovation Hub, and partnerships with leading institutions at home and abroad, we turn the real, unmet clinical problems we meet each day into evidence, new services and homegrown health technology — landmark firsts in transplantation, fertility care and emergency medicine among them.",
+    "Under our 2026 organisational structure — a Provost working through four Corporate Directorates — we are sharpening our focus on service, education, research and community. Whether you are a patient seeking care, a student beginning your journey, a colleague who gives so much, or a partner who shares our mission, you are part of the St. Paul's story. Thank you for being here.",
+  ],
+};
+
 export const LEADERSHIP = [
   {
     id: "provost",
