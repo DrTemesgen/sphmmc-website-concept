@@ -103,7 +103,7 @@ export const HISTORY = {
  */
 export const PROVOST_MESSAGE = {
   name: "Dr. Muluken Tesfaye",
-  title: "Provost & Chief Executive Director",
+  title: "Provost",
   photo: "/images/leaders/provost.png",
   greeting: "Welcome to St. Paul's",
   pullQuote:
