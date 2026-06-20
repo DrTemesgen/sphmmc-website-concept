@@ -7,7 +7,7 @@
 > are **illustrative samples**, not live services. See [`DISCLAIMER.md`](./DISCLAIMER.md).
 
 A proposed redesign for **Saint Paul's Hospital Millennium Medical College** —
-keeping the existing branding (logo, blue `#1e73be`, "Our Speciality, Your Well-Being").
+keeping the existing branding (logo, blue `#1e73be`, motto "Proud past, Promising present, Amazing future!").
 
 ## Stack
 

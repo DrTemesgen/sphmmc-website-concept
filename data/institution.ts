@@ -1,15 +1,15 @@
 /**
  * Institutional identity.
  * Vision, mission and core values reflect the College's current 2026 statements.
- * Contact details, tagline and statistics verified against sphmmc.edu.et
- * (crawled June 2026).
+ * Contact details and statistics verified against sphmmc.edu.et (crawled June 2026).
+ * `tagline` carries the College motto (header metadata, footer, AI assistant).
  */
 
 export const INSTITUTION = {
   name: "Saint Paul's Hospital Millennium Medical College",
   shortName: "St. Paul's Hospital Millennium Medical College",
   acronym: "SPHMMC",
-  tagline: "Our Speciality, Your Well-Being",
+  tagline: "Proud past, Promising present, Amazing future!",
   established:
     "Established by the Council of Ministers Regulation No. 200/2011; accountable to the Federal Ministry of Health through its Governing Board.",
 

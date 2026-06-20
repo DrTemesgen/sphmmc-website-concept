@@ -75,7 +75,8 @@ export default function HomePage() {
             Saint Paul&apos;s Hospital Millennium Medical College
           </p>
           <h1 className="mt-3 font-display text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">
-            Our Speciality, <span className="text-sky">Your Well-Being</span>
+            Proud past, Promising present,{" "}
+            <span className="text-sky">Amazing future!</span>
           </h1>
           <p className="mt-5 max-w-2xl text-lg leading-relaxed text-white/85">
             Ethiopia&apos;s premier academic medical centre — a 700+ bed teaching hospital and
